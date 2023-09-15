@@ -2,7 +2,7 @@ name: Daily Python Script
 
 on:
   workflow_dispatch:
-  push:
+  # push:
   schedule:
     - cron: 7 14 * * *
   # watch:
