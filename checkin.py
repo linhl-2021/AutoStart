@@ -141,6 +141,7 @@ def test(src_filename,result_filename_csv):
 
     print(content) 
     send_message(content)
+    # send_message(content,'bcbd3669-fc22-43fd-95eb-4e2e787c3abf')
     with open(result_filename_csv, 'a', encoding='utf-8') as file2:
         file2.write(content)
         file2.close()
