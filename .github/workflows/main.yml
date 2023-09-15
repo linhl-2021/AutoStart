@@ -1,8 +1,8 @@
 name: Daily Python Script
 
 on:
-  watch:
-    types: [started]
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
   run-script:
