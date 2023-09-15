@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   # push:
   schedule:
-    - cron: 10 14 * * *
+    - cron: * * * * *
   # watch:
   #  types: [started]
 jobs:
