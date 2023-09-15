@@ -2,7 +2,7 @@ name: Daily Python Script
 
 on:
   schedule:
-    - cron: '* * * * *' # 这会在每天的UTC时间的午夜执行
+    - cron: '*/3 * * * *' # 这会每3分钟执行一次
 
 jobs:
   run-script:
@@ -19,7 +19,15 @@ jobs:
 
     - name: Install dependencies
       run: |
-        
+        pip install requests
 
     - name: Run script
       run: python checkin.py # 替换为你的脚本路径和名称
+
+    - name: Commit and push
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "405535591@qq.com"
+        git add -A
+        git commit -m "Add generated files" || echo "No changes to commit"
+        git push
