@@ -19,7 +19,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r requests
+        
 
     - name: Run script
       run: python checkin.py # 替换为你的脚本路径和名称
