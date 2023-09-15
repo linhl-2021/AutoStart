@@ -106,5 +106,5 @@ now = datetime.now()
 formatted_time = now.strftime("%Y%m%d%H%M%S")
 src_filename=f"{codepath}/cookie.txt"
 #/home/runner/work/AutoStart/AutoStart
-result_filename_csv=f"{codepath}/{formatted_time}.csv"
+result_filename_csv=f"{codepath}/log/{formatted_time}.csv"
 test(src_filename,result_filename_csv)
