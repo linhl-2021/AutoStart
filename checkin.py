@@ -90,7 +90,7 @@ def test(src_filename,result_filename_csv):
         for line in file:
             # 去除行两端的空白字符，然后检查是否为空白行
             line = line.strip()
-            if line:
+            if line and not line.startswith("#"):
                 cookie1=line.replace("\n", "")
                 account=get_account(cookie1)
                 message,business,balance=check_in(cookie1)
