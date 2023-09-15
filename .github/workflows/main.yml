@@ -24,11 +24,8 @@ jobs:
     - name: Run script
       run: python checkin.py # 替换为你的脚本路径和名称
 
-    - name: Commit and push
+    - name: Send email
       run: |
-        git config user.name "linhl-2021"
-        git config user.email "405535591@qq.com"
-        git add -A
-        git commit -m "Add generated files" || echo "No changes to commit"
-        git remote set-url origin https://x-access-token:${{ secrets.REPO_PAT }}@github.com/linhl-2021/AutoStart.git
-        git push
+        echo "Here is the content of the Python script's print statements:" > email_body.txt
+        cat github/workspace/path/to/your/output.log >> email_body.txt
+        cat email_body.txt | mail -s "Python Script Output" ${{ secrets.GITHUB_EMAIL }}
