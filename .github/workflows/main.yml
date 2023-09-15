@@ -1,9 +1,10 @@
 name: Daily Python Script
 
 on:
+  workflow_dispatch:
+  push:
   schedule:
-    # - cron: '0 * * * *'
-    - cron: '*/5 * * * *'
+    - cron: */5 * * * *
   # watch:
   #  types: [started]
 jobs:
