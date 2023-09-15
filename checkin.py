@@ -99,6 +99,7 @@ def test(src_filename,result_filename_csv):
                     file2.close()
                     
 codepath = os.path.dirname(os.path.abspath(__file__))
+print(codepath)
 src_filename=f"{codepath}/cookie.txt"
 result_filename_csv=f"{codepath}/result.csv"
 test(src_filename,result_filename_csv)
