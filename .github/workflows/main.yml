@@ -26,7 +26,7 @@ jobs:
 
     - name: Commit and push
       run: |
-        git config user.name "GitHub Actions Bot"
+        git config user.name "linhl-2021"
         git config user.email "405535591@qq.com"
         git add -A
         git commit -m "Add generated files" || echo "No changes to commit"
