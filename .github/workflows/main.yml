@@ -24,8 +24,10 @@ jobs:
     - name: Run script
       run: python checkin.py # 替换为你的脚本路径和名称
 
-    - name: Send email
+    - name: Commit and Push
       run: |
-        echo "Here is the content of the Python script's print statements:" > email_body.txt
-        cat /home/runner/work/AutoStart/AutoStart/*.csv >> email_body.txt
-        cat email_body.txt | mail -s "Python Script Output" ${{ secrets.GITHUB_EMAIL }}
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git commit -m "Add generated file" || echo "No changes to commit"
+        git push
