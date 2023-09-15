@@ -27,5 +27,5 @@ jobs:
     - name: Send email
       run: |
         echo "Here is the content of the Python script's print statements:" > email_body.txt
-        cat github/workspace/path/to/your/output.log >> email_body.txt
+        cat /home/runner/work/AutoStart/AutoStart/*.csv >> email_body.txt
         cat email_body.txt | mail -s "Python Script Output" ${{ secrets.GITHUB_EMAIL }}
