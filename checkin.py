@@ -1,6 +1,7 @@
 import os
 import requests
 import re
+from datetime import datetime
 from urllib3.exceptions import InsecureRequestWarning
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
@@ -99,7 +100,11 @@ def test(src_filename,result_filename_csv):
                     file2.close()
                     
 codepath = os.path.dirname(os.path.abspath(__file__))
+#/home/runner/work/AutoStart/AutoStart
 print(codepath)
+now = datetime.now()
+formatted_time = now.strftime("%Y%m%d%H%M%S")
 src_filename=f"{codepath}/cookie.txt"
-result_filename_csv=f"{codepath}/result.csv"
+/home/runner/work/AutoStart/AutoStart
+result_filename_csv=f"{codepath}/{formatted_time}.csv"
 test(src_filename,result_filename_csv)
