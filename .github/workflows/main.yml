@@ -11,7 +11,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
+      with:
+        token: ${{ secrets.REPO_PAT }}
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -24,10 +25,14 @@ jobs:
     - name: Run script
       run: python checkin.py # 替换为你的脚本路径和名称
 
-    - name: Commit and Push
+    - name: Configure Git
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git config --global url."https://x-access-token:${{ secrets.REPO_PAT }}@github.com/".insteadOf "https://github.com/"
+
+    - name: Commit and Push
+      run: |
         git add -A
         git commit -m "Add generated file" || echo "No changes to commit"
         git push
