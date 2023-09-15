@@ -1,8 +1,8 @@
 name: Daily Python Script
 
 on:
-  schedule:
-    - cron: '*/3 * * * *' # 这会每3分钟执行一次
+  watch:
+    types: [started]
 
 jobs:
   run-script:
