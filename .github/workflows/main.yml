@@ -3,7 +3,7 @@ name: Daily Python Script
 on:
   schedule:
     # - cron: '0 * * * *'
-    - cron: '46 13 * * *'
+    - cron: '*/5 * * * *'
   # watch:
   #  types: [started]
 jobs:
