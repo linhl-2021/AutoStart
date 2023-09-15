@@ -19,8 +19,6 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        # 如果你有任何依赖，例如在requirements.txt中，你可以使用下面的命令进行安装
         pip install -r requests
 
     - name: Run script
