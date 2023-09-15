@@ -93,6 +93,7 @@ def test(src_filename,result_filename_csv):
                 cookie1=line.replace("\n", "")
                 account=get_account(cookie1)
                 message,business,balance=check_in(cookie1)
+                print(f"{account},{balance},{business},{message}\n")
                 with open(result_filename_csv, 'a', encoding='utf-8') as file2:
                     file2.write(f"{account},{balance},{business},{message}\n")
                     file2.close()
