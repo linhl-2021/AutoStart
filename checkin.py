@@ -1,3 +1,4 @@
+import json
 import os
 import requests
 import re
@@ -5,6 +6,46 @@ from datetime import datetime
 from urllib3.exceptions import InsecureRequestWarning
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
+def send_message(msg,key='3ea705e6-4932-4978-8faf-e0a3510ae013'):
+    data = {
+        "msg_type": "text",
+        "content": {"text": msg}
+    }
+    headers = {'Content-Type': 'application/json'}
+    send_url=f"https://open.feishu.cn/open-apis/bot/v2/hook/{key}"
+    print("飞书url： "+send_url)
+    response = requests.post(send_url, headers=headers, data=json.dumps(data))
+    print(response.json())
+    return response.json()
+
+def send_file(file_url,key):
+    data = {
+        "msg_type": "post",
+        "content": {
+            "post": {
+                "zh_cn": {
+                    "content": [
+                        [
+                            {
+                                "tag": "a",
+                                "text": "请查看测试报告",
+                                "href": file_url
+                            },
+                            {
+                                "tag": "at",
+                                "user_id": "all"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }
+    }
+    headers = {'Content-Type': 'application/json'}
+    send_url=f"https://open.feishu.cn/open-apis/bot/v2/hook/{key}"
+    response = requests.post(send_url, headers=headers, data=json.dumps(data))
+    return response.json()
 
 def get_keywords(input_str,keyword):
     # 使用正则表达式查找关键字后面的内容
@@ -79,12 +120,14 @@ def check_in(cookie):
         message=get_keywords(input_str,keyword1)
         business=business.replace("checkin:","")
         business=business.replace("system:","")
+        balance=balance.split('.')[0]
         return message,business,balance
 
 def test(src_filename,result_filename_csv):
-    with open(result_filename_csv, 'w', encoding='utf-8') as file1:
-            file1.write("账号,积分,签到,信息"+"\n")
-            file1.close()
+    content="账号,积分,签到,信息\n"
+    # with open(result_filename_csv, 'w', encoding='utf-8') as file1:
+    #         file1.write("账号,积分,签到,信息"+"\n")
+    #         file1.close()
     # 打开文件并逐行读取域名
     with open(src_filename, 'r',encoding='utf-8') as file:
         for line in file:
@@ -94,11 +137,14 @@ def test(src_filename,result_filename_csv):
                 cookie1=line.replace("\n", "")
                 account=get_account(cookie1)
                 message,business,balance=check_in(cookie1)
-                print(f"{account},{balance},{business},{message}\n")
-                with open(result_filename_csv, 'a', encoding='utf-8') as file2:
-                    file2.write(f"{account},{balance},{business},{message}\n")
-                    file2.close()
-                    
+                content=content+f"{account},{balance},{business},{message}\n"
+
+    print(content) 
+    send_message(content)
+    with open(result_filename_csv, 'a', encoding='utf-8') as file2:
+        file2.write(content)
+        file2.close()
+
 codepath = os.path.dirname(os.path.abspath(__file__))
 #/home/runner/work/AutoStart/AutoStart
 print(codepath)

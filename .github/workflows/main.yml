@@ -1,10 +1,10 @@
 name: Daily Python Script
 
 on:
-  schedule:
-    - cron: '0 * * * *'
-  #watch:
-   # types: [started]
+  # schedule:
+  #   - cron: '0 * * * *'
+  watch:
+   types: [started]
 jobs:
   run-script:
     runs-on: ubuntu-latest
