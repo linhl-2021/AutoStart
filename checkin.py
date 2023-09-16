@@ -125,22 +125,26 @@ def check_in(cookie):
 
 def test(src_filename,result_filename_csv):
     content="账号,积分,签到,信息\n"
+    content_feishu="海外vpn\n"
     # with open(result_filename_csv, 'w', encoding='utf-8') as file1:
     #         file1.write("账号,积分,签到,信息"+"\n")
     #         file1.close()
     # 打开文件并逐行读取域名
+    num=0
     with open(src_filename, 'r',encoding='utf-8') as file:
         for line in file:
             # 去除行两端的空白字符，然后检查是否为空白行
             line = line.strip()
             if line and not line.startswith("#"):
+                num=num+1
                 cookie1=line.replace("\n", "")
                 account=get_account(cookie1)
                 message,business,balance=check_in(cookie1)
                 content=content+f"{account},{balance},{business},{message}\n"
+                content_feishu=content_feishu+f"{num}、账号: {account},积分: {balance},签到: {business},信息: {message}\n"
 
-    print(content) 
-    send_message(content)
+    print(content_feishu) 
+    send_message(content_feishu)
     # send_message(content,'bcbd3669-fc22-43fd-95eb-4e2e787c3abf')
     with open(result_filename_csv, 'a', encoding='utf-8') as file2:
         file2.write(content)
