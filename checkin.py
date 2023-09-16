@@ -150,7 +150,7 @@ codepath = os.path.dirname(os.path.abspath(__file__))
 #/home/runner/work/AutoStart/AutoStart
 print(codepath)
 now = datetime.now()
-formatted_time = now.strftime("%Y%m%d%H%M%S")
+formatted_time = now.strftime("%Y%m%d-%H%M%S")
 src_filename=f"{codepath}/cookie.txt"
 #/home/runner/work/AutoStart/AutoStart
 result_filename_csv=f"{codepath}/log/{formatted_time}.csv"
