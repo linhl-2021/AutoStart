@@ -5,8 +5,8 @@ on:
   # push:
   schedule:
     - cron: '0 */20 * * *'
-  # watch:
-  #  types: [started]
+  watch:
+   types: [started]
 jobs:
   run-script:
     runs-on: ubuntu-latest
