@@ -121,41 +121,47 @@ def check_in(cookie):
         business=business.replace("checkin:","")
         business=business.replace("system:","")
         balance=balance.split('.')[0]
+        balance=int(balance)
         return message,business,balance
 
 def test(src_filename,result_filename_csv):
     content="账号,积分,签到,信息\n"
     content_feishu="海外vpn\n"
-    # with open(result_filename_csv, 'w', encoding='utf-8') as file1:
-    #         file1.write("账号,积分,签到,信息"+"\n")
-    #         file1.close()
-    # 打开文件并逐行读取域名
     num=0
+    result_list = []
     with open(src_filename, 'r',encoding='utf-8') as file:
         for line in file:
             # 去除行两端的空白字符，然后检查是否为空白行
             line = line.strip()
             if line and not line.startswith("#"):
-                num=num+1
                 cookie1=line.replace("\n", "")
                 account=get_account(cookie1)
                 message,business,balance=check_in(cookie1)
                 content=content+f"{account},{balance},{business},{message}\n"
-                content_feishu=content_feishu+f"{num}、账号: {account},积分: {balance},签到: {business},信息: {message}\n"
+                # content_feishu=content_feishu+f"{num}、账号: {account},积分: {balance},签到: {business},信息: {message}\n"
+                result_list.append({"账号": account, "积分": balance, "签到": business, "信息": message})
+    
+    # 按balance字段的值进行排序（假设balance是一个数字）
+    sorted_result = sorted(result_list, key=lambda x: x["积分"], reverse=True)
+    # 打印排序后的结果
+    for entry in sorted_result:
+        num=num+1
+        content_feishu=content_feishu+f"{num}、账号: {entry['账号']},积分: {entry['积分']},签到: {entry['签到']},信息: {entry['信息']}\n"
 
     print(content_feishu) 
     send_message(content_feishu)
-    # send_message(content,'bcbd3669-fc22-43fd-95eb-4e2e787c3abf')
     with open(result_filename_csv, 'a', encoding='utf-8') as file2:
         file2.write(content)
         file2.close()
+
+    # send_message(content,'bcbd3669-fc22-43fd-95eb-4e2e787c3abf')
 
 codepath = os.path.dirname(os.path.abspath(__file__))
 #/home/runner/work/AutoStart/AutoStart
 print(codepath)
 now = datetime.now()
 formatted_time = now.strftime("%Y%m%d-%H%M%S")
-src_filename=f"{codepath}/cookie.txt"
+src_filename=f"{codepath}/cookie.sh"
 #/home/runner/work/AutoStart/AutoStart
 result_filename_csv=f"{codepath}/log/{formatted_time}.csv"
 test(src_filename,result_filename_csv)
