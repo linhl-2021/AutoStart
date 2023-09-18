@@ -81,8 +81,15 @@ def get_account(cookie):
         # print(response.text)
         input_str=response.text
         keyword1="email"
+        keyword2="leftDays"
         account=get_keywords(input_str,keyword1)
-        return account
+        leftDays=get_keywords(input_str,keyword2)
+        if leftDays:
+            leftDays=leftDays.split('.')[0]
+            leftDays=int(leftDays)
+        else:
+            leftDays=0
+        return account,leftDays
 
 def check_in(cookie):
     # 要查询的 URL
@@ -124,8 +131,13 @@ def check_in(cookie):
         balance=int(balance)
         return message,business,balance
 
+def create_file(content,result_filename_csv):
+    with open(result_filename_csv, 'a', encoding='utf-8') as file2:
+        file2.write(content)
+        file2.close()
+
 def test(src_filename,result_filename_csv):
-    content="账号,积分,签到,信息\n"
+    content="账号,积分,签到,信息,天数\n"
     content_feishu="海外vpn\n"
     num=0
     result_list = []
@@ -135,24 +147,23 @@ def test(src_filename,result_filename_csv):
             line = line.strip()
             if line and not line.startswith("#"):
                 cookie1=line.replace("\n", "")
-                account=get_account(cookie1)
+                account,leftDays=get_account(cookie1)
                 message,business,balance=check_in(cookie1)
-                content=content+f"{account},{balance},{business},{message}\n"
+                # content=content+f"{account},{balance},{business},{message}\n"
                 # content_feishu=content_feishu+f"{num}、账号: {account},积分: {balance},签到: {business},信息: {message}\n"
-                result_list.append({"账号": account, "积分": balance, "签到": business, "信息": message})
+                result_list.append({"账号": account, "积分": balance, "签到": business, "信息": message,"天数": leftDays})
     
     # 按balance字段的值进行排序（假设balance是一个数字）
     sorted_result = sorted(result_list, key=lambda x: x["积分"], reverse=True)
     # 打印排序后的结果
     for entry in sorted_result:
         num=num+1
-        content_feishu=content_feishu+f"{num}、账号: {entry['账号']},积分: {entry['积分']},签到: {entry['签到']},信息: {entry['信息']}\n"
+        content_feishu=content_feishu+f"{num}、账号: {entry['账号']},积分: {entry['积分']},签到: {entry['签到']},信息: {entry['信息']},天数: {entry['天数']}\n"
+        content=content+f"{entry['账号']},{entry['积分']},{entry['签到']},{entry['信息']},{entry['天数']}\n"
 
     print(content_feishu) 
     send_message(content_feishu)
-    with open(result_filename_csv, 'a', encoding='utf-8') as file2:
-        file2.write(content)
-        file2.close()
+    create_file(content,result_filename_csv)
 
     # send_message(content,'bcbd3669-fc22-43fd-95eb-4e2e787c3abf')
 
