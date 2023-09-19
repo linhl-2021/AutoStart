@@ -1,0 +1,17 @@
+-----------------tree info-----------------
+any 255-4095-255-0
+    HTTP协议 1-0-0-0 level:1 custom-level:0
+        WEB应用 1-1-0-0 level:1 custom-level:0
+            普通网页浏览 1-1-1-0 level:1 custom-level:0
+            HTTP代理 1-1-2-0 level:1 custom-level:0
+            GIF图片 1-1-3-0 level:1 custom-level:0
+            美图秀秀or美颜相机 1-1-8-0 level:1 custom-level:0
+            MSN 1-1-10-0 level:1 custom-level:0
+            火狐 1-1-11-0 level:1 custom-level:0
+            Aol 1-1-12-0 level:1 custom-level:0
+            Fast 1-1-13-0 level:1 custom-level:0
+            Wikipedia 1-1-14-0 level:1 custom-level:0
+            Google 1-1-15-0 level:1 custom-level:0
+    视频or影音-APP 12-0-0-0 level:3 custom-level:0
+        Facetime 12-3-0-0 level:3 custom-level:0
+        Uplive-APP 12-5-0-0 level:3 custom-level:0

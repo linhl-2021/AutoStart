@@ -1,0 +1,435 @@
+2023-04-18 20:18:44,610 - dealfile.py:dealfile:505 - DEBUG - frontpath路径： /home/release/linhl/linhl-auto-py
+2023-04-18 20:18:44,620 - dealfile.py:shell_command:45 - DEBUG - 执行命令： mkdir -p /home/release/linhl/linhl-auto-py/data/file/
+2023-04-18 20:18:44,626 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:44,628 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:44,629 - mainsh.py:<module>:25 - DEBUG - 开始下载文件
+2023-04-18 20:18:45,847 - dealfile.py:ftp_get_file:594 - DEBUG - 下载文件为： ['test']
+2023-04-18 20:18:45,849 - dealfile.py:ftp_get_file:597 - DEBUG - test
+2023-04-18 20:18:46,149 - dealfile.py:shell_command:45 - DEBUG - 执行命令： rm -rf /home/release/linhl/linhl-auto-py/data/file//descript.ion
+2023-04-18 20:18:46,156 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:46,158 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:46,200 - mainsh.py:<module>:50 - DEBUG - 文件内容为： appid---飞书群key为： 3ea705e6-4932-4978-8faf-e0a3510ae013
+2023-04-18 20:18:47,402 - dealfile.py:ftp_get_file:594 - DEBUG - 下载文件为： ['12-44-0-0_阿基米德-APP@android@20211208@yes.pcap', '21-102-0-0_销售易@iphone@20221212@yes.pcap', '26-102-0-0_销售易@iphone@20221212@yes.pcap', '26-15-0-0_华图在线公务员@android@20211217@yes.pcap', '9-3-44-0_阿基米德-APP@android@20211208@yes.pcap']
+2023-04-18 20:18:47,402 - dealfile.py:ftp_get_file:597 - DEBUG - 12-44-0-0_阿基米德-APP@android@20211208@yes.pcap
+2023-04-18 20:18:47,708 - dealfile.py:ftp_get_file:597 - DEBUG - 21-102-0-0_销售易@iphone@20221212@yes.pcap
+2023-04-18 20:18:48,012 - dealfile.py:ftp_get_file:597 - DEBUG - 26-102-0-0_销售易@iphone@20221212@yes.pcap
+2023-04-18 20:18:48,313 - dealfile.py:ftp_get_file:597 - DEBUG - 26-15-0-0_华图在线公务员@android@20211217@yes.pcap
+2023-04-18 20:18:48,619 - dealfile.py:ftp_get_file:597 - DEBUG - 9-3-44-0_阿基米德-APP@android@20211208@yes.pcap
+2023-04-18 20:18:48,924 - dealfile.py:shell_command:45 - DEBUG - 执行命令： rm -rf /home/release/linhl/linhl-auto-py/data/pcap_appid_temp//descript.ion
+2023-04-18 20:18:48,932 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:48,933 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:48,974 - dealfile.py:ftp_del_file:613 - DEBUG - 删除ftp目录文件
+2023-04-18 20:18:49,996 - dealfile.py:ftp_del_file:625 - DEBUG - test deleted successfully
+2023-04-18 20:18:50,047 - dealfile.py:updatefeature:1420 - DEBUG - 判断是否升级特征库
+2023-04-18 20:18:50,047 - dealfile.py:updatefeature:1432 - DEBUG - 当前目录下文件为：test
+2023-04-18 20:18:50,048 - dealfile.py:shell_command:45 - DEBUG - 执行命令： ifconfig eth1 up
+2023-04-18 20:18:50,127 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:50,129 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:50,130 - dealfile.py:shell_command:45 - DEBUG - 执行命令： ifconfig eth2 up
+2023-04-18 20:18:50,138 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:50,139 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:50,140 - dealfile.py:shell_command:45 - DEBUG - 执行命令： ifconfig eth1 mtu 1600
+2023-04-18 20:18:50,218 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:50,219 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:50,220 - dealfile.py:shell_command:45 - DEBUG - 执行命令： ifconfig eth2 mtu 1600
+2023-04-18 20:18:50,293 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:50,296 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:50,297 - dealfile.py:shell_command:45 - DEBUG - 执行命令： ifconfig eth1 10.10.10.10 netmask 255.255.255.0
+2023-04-18 20:18:50,324 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:50,326 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:50,327 - dealfile.py:shell_command:45 - DEBUG - 执行命令： ifconfig eth1 20.20.20.20 netmask 255.255.255.0
+2023-04-18 20:18:50,354 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:50,354 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:50,354 - dealfile.py:shell_command:45 - DEBUG - 执行命令： ifconfig eth1 10.10.10.10 netmask 255.255.255.0
+2023-04-18 20:18:50,379 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:50,381 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:50,381 - dealfile.py:shell_command:45 - DEBUG - 执行命令： ifconfig eth1 inet6 add 2000:10::254/112
+2023-04-18 20:18:50,394 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:50,395 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:50,396 - dealfile.py:shell_command:45 - DEBUG - 执行命令： ifconfig eth2 inet6 add 2000:20::254/112
+2023-04-18 20:18:50,406 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:18:50,407 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:18:50,408 - dealfile.py:pcap_check:1483 - DEBUG - appid,开始回放包
+2023-04-18 20:18:50,444 - dealfile.py:pcap_check:1500 - DEBUG - 待回放包数量： 5
+2023-04-18 20:18:50,445 - dealfile.py:init_firewall:1238 - DEBUG - 应用识别执行root账号命令
+2023-04-18 20:18:50,448 - dealfile.py:init_firewall:1310 - DEBUG - 开始初始化防火墙
+2023-04-18 20:18:50,450 - dealfile.py:init_firewall:1312 - DEBUG - 执行命令为： ssh-keygen -R 10.51.212.30
+2023-04-18 20:18:50,450 - dealfile.py:init_firewall:1314 - DEBUG - debug模式
+2023-04-18 20:18:51,110 - dealfile.py:init_firewall:1329 - DEBUG - Host 10.51.212.30 not found in /root/.ssh/known_hosts
+2023-04-18 20:18:51,113 - dealfile.py:init_firewall:1329 - DEBUG - 
+2023-04-18 20:18:51,113 - dealfile.py:init_firewall:1329 - DEBUG - 
+2023-04-18 20:18:51,114 - dealfile.py:init_firewall:1322 - DEBUG - 命令执行结束ssh-keygen -R 10.51.212.30
+2023-04-18 20:18:51,834 - dealfile.py:init_firewall:1337 - DEBUG - 执行命令为： ssh root@10.51.212.30
+2023-04-18 20:18:51,914 - dealfile.py:init_firewall:1341 - DEBUG - Received 1, executing next yes
+2023-04-18 20:18:52,034 - dealfile.py:init_firewall:1345 - DEBUG - 输入防火墙密码： ruijie@123
+2023-04-18 20:18:52,086 - dealfile.py:init_firewall:1357 - DEBUG - 
+2023-04-18 20:18:52,087 - dealfile.py:init_firewall:1357 - DEBUG - 
+2023-04-18 20:18:52,170 - dealfile.py:init_firewall:1350 - DEBUG - 命令执行结束ssh root@10.51.212.30
+2023-04-18 20:18:52,269 - dealfile.py:init_firewall:1416 - DEBUG - 2  kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTY:5}` |grep -v bash | awk '{print $2}')
+2023-04-18 20:18:52,398 - dealfile.py:init_firewall:1416 - DEBUG - 2  sudo fpcmd fp app-id cfg enable cache false
+2023-04-18 20:18:52,470 - dealfile.py:init_firewall:1416 - DEBUG - 2  sudo fpcmd fp app-id cfg enable expect false
+2023-04-18 20:18:52,605 - dealfile.py:init_firewall:1416 - DEBUG - 2  sudo fpcmd fp app-id show application > /mnt/flash/app-rules.txt
+2023-04-18 20:18:52,784 - dealfile.py:init_firewall:1399 - DEBUG - 输入linux密码： ruijie12345
+2023-04-18 20:18:52,837 - dealfile.py:init_firewall:1411 - DEBUG - 
+2023-04-18 20:18:52,837 - dealfile.py:init_firewall:1411 - DEBUG - 
+2023-04-18 20:18:53,264 - dealfile.py:init_firewall:1411 - DEBUG - 
+2023-04-18 20:18:53,274 - dealfile.py:init_firewall:1411 - DEBUG - app-rules.txt                                   0%    0     0.0KB/s   --:-- ETA
+2023-04-18 20:18:53,274 - dealfile.py:init_firewall:1411 - DEBUG - app-rules.txt                                 100%  273KB  20.2MB/s   00:00
+2023-04-18 20:18:53,274 - dealfile.py:init_firewall:1411 - DEBUG - 
+2023-04-18 20:18:53,279 - dealfile.py:init_firewall:1404 - DEBUG - 命令执行结束sudo scp -r /mnt/flash/app-rules.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/update/appid/
+2023-04-18 20:18:53,279 - dealfile.py:init_firewall:1416 - DEBUG - 1  sudo scp -r /mnt/flash/app-rules.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/update/appid/
+2023-04-18 20:19:03,337 - dealfile.py:init_firewall:1416 - DEBUG - 4  sudo fp-npfctl flows-flush
+2023-04-18 20:19:13,397 - dealfile.py:init_firewall:1416 - DEBUG - 4  exit
+2023-04-18 20:19:13,498 - dealfile.py:send_message:467 - DEBUG - 飞书url： https://open.feishu.cn/open-apis/bot/v2/hook/3ea705e6-4932-4978-8faf-e0a3510ae013
+2023-04-18 20:19:14,003 - dealfile.py:send_message:469 - DEBUG - {'StatusCode': 0, 'StatusMessage': 'success', 'code': 0, 'data': {}, 'msg': 'success'}
+2023-04-18 20:19:14,005 - dealfile.py:pcap_check:1516 - DEBUG - 创建目录： /home/release/linhl/linhl-auto-py/temp/0418_2019
+2023-04-18 20:19:14,007 - dealfile.py:shell_command:45 - DEBUG - 执行命令： rm -rf  /home/release/linhl/linhl-auto-py/report/appid/all//*
+2023-04-18 20:19:14,015 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:14,016 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:14,017 - dealfile.py:shell_command:45 - DEBUG - 执行命令： pkt2flow  -uo /home/release/linhl/linhl-auto-py/report/appid/all/ /home/release/linhl/linhl-auto-py/data/pcap_appid/9-3-44-0_阿基米德-APP@android@20211208@yes.pcap
+2023-04-18 20:19:14,068 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:14,070 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:14,071 - dealfile.py:replay_pcap:275 - DEBUG - /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.232_37759_223.6.253.54_80_1638935136.pcap
+2023-04-18 20:19:14,072 - dealfile.py:replay_pcap:278 - DEBUG - ipv4
+2023-04-18 20:19:14,196 - dealfile.py:replay_pcap:285 - DEBUG - replay: bigpcap 1 bigpcap文件名： 9-3-44-0_阿基米德-APP@android@20211208@yes.pcap smallpcap文件路径： /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.232_37759_223.6.253.54_80_1638935136.pcap smallpcap大小：11279B client:100.100.206.101 server:200.200.78.180
+2023-04-18 20:19:14,197 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcprewrite --enet-vlan=del --infile=/home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.232_37759_223.6.253.54_80_1638935136.pcap --outfile=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap
+2023-04-18 20:19:14,217 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:14,219 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:14,220 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcpprep --auto=client --cachefile=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach --pcap=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap
+2023-04-18 20:19:14,231 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:14,232 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:14,233 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcprewrite -m 1600 -C -e 100.100.206.101:200.200.78.180 --enet_smac=08:00:27:c1:da:1d,08:00:27:c1:da:2d                     --enet_dmac=28:d0:f5:04:55:e7,28:d0:f5:04:55:e8 -c /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach -i                     /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap -o /home/release/linhl/linhl-auto-py/temp/0418_2019/ok.pcap
+2023-04-18 20:19:14,239 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:14,240 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:14,241 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcpreplay -c /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach -i eth1 -I eth2 -l 1 -p 300 /home/release/linhl/linhl-auto-py/temp/0418_2019/ok.pcap
+2023-04-18 20:19:14,372 - dealfile.py:shell_command:49 - DEBUG - Actual: 35 packets (10695 bytes) sent in 0.113357 seconds
+Rated: 94347.9 Bps, 0.754 Mbps, 308.75 pps
+Statistics for network device: eth1
+	Successful packets:        19
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+Statistics for network device: eth2
+	Successful packets:        16
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+
+2023-04-18 20:19:14,377 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:14,377 - dealfile.py:get_flow:117 - DEBUG - 应用识别执行root账号命令
+2023-04-18 20:19:15,026 - dealfile.py:get_flow:182 - DEBUG - 执行命令为： ssh root@10.51.212.30
+2023-04-18 20:19:15,140 - dealfile.py:get_flow:204 - DEBUG - 输入防火墙密码： ruijie@123
+2023-04-18 20:19:15,192 - dealfile.py:get_flow:216 - DEBUG - 
+2023-04-18 20:19:15,192 - dealfile.py:get_flow:216 - DEBUG - 
+2023-04-18 20:19:15,272 - dealfile.py:get_flow:209 - DEBUG - 命令执行结束ssh root@10.51.212.30
+2023-04-18 20:19:15,361 - dealfile.py:get_flow:262 - DEBUG - 2  kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTY:5}` |grep -v bash | awk '{print $2}')
+2023-04-18 20:19:15,455 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 > appid.txt
+2023-04-18 20:19:15,545 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 >> appid.txt
+2023-04-18 20:19:15,638 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 >> appid.txt
+2023-04-18 20:19:15,798 - dealfile.py:get_flow:244 - DEBUG - 输入linux密码： ruijie12345
+2023-04-18 20:19:15,853 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:15,853 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:16,223 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:16,226 - dealfile.py:get_flow:256 - DEBUG - appid.txt                                       0%    0     0.0KB/s   --:-- ETA
+2023-04-18 20:19:16,226 - dealfile.py:get_flow:256 - DEBUG - appid.txt                                     100% 5103     1.7MB/s   00:00
+2023-04-18 20:19:16,226 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:16,232 - dealfile.py:get_flow:249 - DEBUG - 命令执行结束sudo scp -r appid.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/report/appid/
+2023-04-18 20:19:16,232 - dealfile.py:get_flow:262 - DEBUG - 1  sudo scp -r appid.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/report/appid/
+2023-04-18 20:19:16,304 - dealfile.py:get_flow:262 - DEBUG - 2  sudo rm -rf appid.txt
+2023-04-18 20:19:18,364 - dealfile.py:get_flow:262 - DEBUG - 4  sudo fp-npfctl flows-flush
+2023-04-18 20:19:20,417 - dealfile.py:get_flow:262 - DEBUG - 4  exit
+2023-04-18 20:19:20,518 - dealfile.py:replay_pcap:329 - DEBUG - 命中流139         TCP  100.100.206.101/37759 200.200.78.180/80     12-44-0-0       255-5-0-0       N:0     1   F:5 L:5 D:1 2093       8112       S:4  HF   2  
+
+2023-04-18 20:19:20,519 - dealfile.py:get_command_response:56 - DEBUG - 执行命令： cat /home/release/linhl/linhl-auto-py/update/appid/*rules.txt |grep 12-44-0-0|awk -F ' ' '{print $1}'
+2023-04-18 20:19:20,531 - dealfile.py:replay_pcap:339 - DEBUG - 命中流1 文件名： 9-3-44-0_阿基米德-APP@android@20211208@yes.pcap 小包： /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.232_37759_223.6.253.54_80_1638935136.pcap   协议 tcp 源端口 37759 目的端口： 80 sid：12-44-0-0 name 阿基米德-APP bigpcap_sid: 9-3-44-0
+2023-04-18 20:19:20,533 - dealfile.py:shell_command:45 - DEBUG - 执行命令： echo 9-3-44-0_阿基米德-APP@android@20211208@yes.pcap#192.168.137.232_37759_223.6.253.54_80_1638935136.pcap#11279#tcp#####no >> /home/release/linhl/linhl-auto-py/report/appid/log.csv
+2023-04-18 20:19:20,547 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:20,547 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:20,547 - dealfile.py:replay_pcap:329 - DEBUG - 命中流139         TCP  100.100.206.101/37759 200.200.78.180/80     12-44-0-0       255-5-0-0       N:0     1   F:5 L:5 D:1 2093       8112       S:4  HF   2  
+
+2023-04-18 20:19:20,548 - dealfile.py:replay_pcap:329 - DEBUG - 命中流139         TCP  100.100.206.101/37759 200.200.78.180/80     12-44-0-0       255-5-0-0       N:0     1   F:5 L:5 D:1 2093       8112       S:4  HF   2  
+
+2023-04-18 20:19:20,548 - dealfile.py:shell_command:45 - DEBUG - 执行命令： rm -rf  /home/release/linhl/linhl-auto-py/report/appid/all//*
+2023-04-18 20:19:20,561 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:20,561 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:20,561 - dealfile.py:shell_command:45 - DEBUG - 执行命令： pkt2flow  -uo /home/release/linhl/linhl-auto-py/report/appid/all/ /home/release/linhl/linhl-auto-py/data/pcap_appid/26-15-0-0_华图在线公务员@android@20211217@yes.pcap
+2023-04-18 20:19:20,570 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:20,572 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:20,573 - dealfile.py:replay_pcap:275 - DEBUG - /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.190_48321_123.56.220.129_443_1639722007.pcap
+2023-04-18 20:19:20,574 - dealfile.py:replay_pcap:278 - DEBUG - ipv4
+2023-04-18 20:19:20,679 - dealfile.py:replay_pcap:285 - DEBUG - replay: bigpcap 2 bigpcap文件名： 26-15-0-0_华图在线公务员@android@20211217@yes.pcap smallpcap文件路径： /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.190_48321_123.56.220.129_443_1639722007.pcap smallpcap大小：11252B client:100.100.140.238 server:200.200.140.45
+2023-04-18 20:19:20,681 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcprewrite --enet-vlan=del --infile=/home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.190_48321_123.56.220.129_443_1639722007.pcap --outfile=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap
+2023-04-18 20:19:20,689 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:20,690 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:20,691 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcpprep --auto=client --cachefile=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach --pcap=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap
+2023-04-18 20:19:20,697 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:20,702 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:20,702 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcprewrite -m 1600 -C -e 100.100.140.238:200.200.140.45 --enet_smac=08:00:27:c1:da:1d,08:00:27:c1:da:2d                     --enet_dmac=28:d0:f5:04:55:e7,28:d0:f5:04:55:e8 -c /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach -i                     /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap -o /home/release/linhl/linhl-auto-py/temp/0418_2019/ok.pcap
+2023-04-18 20:19:20,713 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:20,713 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:20,713 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcpreplay -c /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach -i eth1 -I eth2 -l 1 -p 300 /home/release/linhl/linhl-auto-py/temp/0418_2019/ok.pcap
+2023-04-18 20:19:20,813 - dealfile.py:shell_command:49 - DEBUG - Actual: 27 packets (10796 bytes) sent in 0.086681 seconds
+Rated: 124548.6 Bps, 0.996 Mbps, 311.48 pps
+Statistics for network device: eth1
+	Successful packets:        15
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+Statistics for network device: eth2
+	Successful packets:        12
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+
+2023-04-18 20:19:20,817 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:20,817 - dealfile.py:get_flow:117 - DEBUG - 应用识别执行root账号命令
+2023-04-18 20:19:21,405 - dealfile.py:get_flow:182 - DEBUG - 执行命令为： ssh root@10.51.212.30
+2023-04-18 20:19:21,520 - dealfile.py:get_flow:204 - DEBUG - 输入防火墙密码： ruijie@123
+2023-04-18 20:19:21,572 - dealfile.py:get_flow:216 - DEBUG - 
+2023-04-18 20:19:21,572 - dealfile.py:get_flow:216 - DEBUG - 
+2023-04-18 20:19:21,656 - dealfile.py:get_flow:209 - DEBUG - 命令执行结束ssh root@10.51.212.30
+2023-04-18 20:19:21,784 - dealfile.py:get_flow:262 - DEBUG - 2  kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTY:5}` |grep -v bash | awk '{print $2}')
+2023-04-18 20:19:21,874 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 > appid.txt
+2023-04-18 20:19:21,963 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 >> appid.txt
+2023-04-18 20:19:22,058 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 >> appid.txt
+2023-04-18 20:19:22,219 - dealfile.py:get_flow:244 - DEBUG - 输入linux密码： ruijie12345
+2023-04-18 20:19:22,278 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:22,278 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:22,661 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:22,663 - dealfile.py:get_flow:256 - DEBUG - appid.txt                                       0%    0     0.0KB/s   --:-- ETA
+2023-04-18 20:19:22,663 - dealfile.py:get_flow:256 - DEBUG - appid.txt                                     100% 1848   652.9KB/s   00:00
+2023-04-18 20:19:22,663 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:22,673 - dealfile.py:get_flow:249 - DEBUG - 命令执行结束sudo scp -r appid.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/report/appid/
+2023-04-18 20:19:22,673 - dealfile.py:get_flow:262 - DEBUG - 1  sudo scp -r appid.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/report/appid/
+2023-04-18 20:19:22,747 - dealfile.py:get_flow:262 - DEBUG - 2  sudo rm -rf appid.txt
+2023-04-18 20:19:24,808 - dealfile.py:get_flow:262 - DEBUG - 4  sudo fp-npfctl flows-flush
+2023-04-18 20:19:26,861 - dealfile.py:get_flow:262 - DEBUG - 4  exit
+2023-04-18 20:19:26,962 - dealfile.py:replay_pcap:329 - DEBUG - 命中流69          TCP  100.100.140.238/48321 200.200.140.45/443    31-15-0-0       255-5-0-0       N:0     1   F:5 L:5 D:1 3552       6866       S:1  SF   3  
+
+2023-04-18 20:19:26,963 - dealfile.py:get_command_response:56 - DEBUG - 执行命令： cat /home/release/linhl/linhl-auto-py/update/appid/*rules.txt |grep 31-15-0-0|awk -F ' ' '{print $1}'
+2023-04-18 20:19:26,973 - dealfile.py:replay_pcap:339 - DEBUG - 命中流1 文件名： 26-15-0-0_华图在线公务员@android@20211217@yes.pcap 小包： /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.190_48321_123.56.220.129_443_1639722007.pcap   协议 tcp 源端口 48321 目的端口： 443 sid：31-15-0-0 name  bigpcap_sid: 26-15-0-0
+2023-04-18 20:19:26,975 - dealfile.py:shell_command:45 - DEBUG - 执行命令： echo 26-15-0-0_华图在线公务员@android@20211217@yes.pcap#192.168.137.190_48321_123.56.220.129_443_1639722007.pcap#11252#tcp#####no >> /home/release/linhl/linhl-auto-py/report/appid/log.csv
+2023-04-18 20:19:26,980 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:26,981 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:26,982 - dealfile.py:replay_pcap:329 - DEBUG - 命中流69          TCP  100.100.140.238/48321 200.200.140.45/443    31-15-0-0       255-5-0-0       N:0     1   F:5 L:5 D:1 3552       6866       S:1  SF   3  
+
+2023-04-18 20:19:26,985 - dealfile.py:replay_pcap:329 - DEBUG - 命中流69          TCP  100.100.140.238/48321 200.200.140.45/443    31-15-0-0       255-5-0-0       N:0     1   F:5 L:5 D:1 3552       6866       S:1  SF   3  
+
+2023-04-18 20:19:26,985 - dealfile.py:shell_command:45 - DEBUG - 执行命令： rm -rf  /home/release/linhl/linhl-auto-py/report/appid/all//*
+2023-04-18 20:19:27,002 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:27,002 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:27,002 - dealfile.py:shell_command:45 - DEBUG - 执行命令： pkt2flow  -uo /home/release/linhl/linhl-auto-py/report/appid/all/ /home/release/linhl/linhl-auto-py/data/pcap_appid/26-102-0-0_销售易@iphone@20221212@yes.pcap
+2023-04-18 20:19:27,011 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:27,012 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:27,013 - dealfile.py:replay_pcap:275 - DEBUG - /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.1.50_63411_42.187.172.173_443_1670567174.pcap
+2023-04-18 20:19:27,014 - dealfile.py:replay_pcap:278 - DEBUG - ipv4
+2023-04-18 20:19:27,121 - dealfile.py:replay_pcap:285 - DEBUG - replay: bigpcap 3 bigpcap文件名： 26-102-0-0_销售易@iphone@20221212@yes.pcap smallpcap文件路径： /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.1.50_63411_42.187.172.173_443_1670567174.pcap smallpcap大小：11286B client:100.100.67.67 server:200.200.187.190
+2023-04-18 20:19:27,123 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcprewrite --enet-vlan=del --infile=/home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.1.50_63411_42.187.172.173_443_1670567174.pcap --outfile=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap
+2023-04-18 20:19:27,131 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:27,133 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:27,137 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcpprep --auto=client --cachefile=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach --pcap=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap
+2023-04-18 20:19:27,143 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:27,144 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:27,147 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcprewrite -m 1600 -C -e 100.100.67.67:200.200.187.190 --enet_smac=08:00:27:c1:da:1d,08:00:27:c1:da:2d                     --enet_dmac=28:d0:f5:04:55:e7,28:d0:f5:04:55:e8 -c /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach -i                     /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap -o /home/release/linhl/linhl-auto-py/temp/0418_2019/ok.pcap
+2023-04-18 20:19:27,155 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:27,156 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:27,158 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcpreplay -c /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach -i eth1 -I eth2 -l 1 -p 300 /home/release/linhl/linhl-auto-py/temp/0418_2019/ok.pcap
+2023-04-18 20:19:27,261 - dealfile.py:shell_command:49 - DEBUG - Actual: 28 packets (10814 bytes) sent in 0.090018 seconds
+Rated: 120131.5 Bps, 0.961 Mbps, 311.04 pps
+Statistics for network device: eth1
+	Successful packets:        14
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+Statistics for network device: eth2
+	Successful packets:        14
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+
+2023-04-18 20:19:27,265 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:27,266 - dealfile.py:get_flow:117 - DEBUG - 应用识别执行root账号命令
+2023-04-18 20:19:27,860 - dealfile.py:get_flow:182 - DEBUG - 执行命令为： ssh root@10.51.212.30
+2023-04-18 20:19:27,970 - dealfile.py:get_flow:204 - DEBUG - 输入防火墙密码： ruijie@123
+2023-04-18 20:19:28,021 - dealfile.py:get_flow:216 - DEBUG - 
+2023-04-18 20:19:28,021 - dealfile.py:get_flow:216 - DEBUG - 
+2023-04-18 20:19:28,104 - dealfile.py:get_flow:209 - DEBUG - 命令执行结束ssh root@10.51.212.30
+2023-04-18 20:19:28,198 - dealfile.py:get_flow:262 - DEBUG - 2  kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTY:5}` |grep -v bash | awk '{print $2}')
+2023-04-18 20:19:28,288 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 > appid.txt
+2023-04-18 20:19:28,379 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 >> appid.txt
+2023-04-18 20:19:28,547 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 >> appid.txt
+2023-04-18 20:19:28,704 - dealfile.py:get_flow:244 - DEBUG - 输入linux密码： ruijie12345
+2023-04-18 20:19:28,757 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:28,757 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:29,132 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:29,134 - dealfile.py:get_flow:256 - DEBUG - appid.txt                                       0%    0     0.0KB/s   --:-- ETA
+2023-04-18 20:19:29,134 - dealfile.py:get_flow:256 - DEBUG - appid.txt                                     100%  924   805.8KB/s   00:00
+2023-04-18 20:19:29,134 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:29,142 - dealfile.py:get_flow:249 - DEBUG - 命令执行结束sudo scp -r appid.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/report/appid/
+2023-04-18 20:19:29,142 - dealfile.py:get_flow:262 - DEBUG - 1  sudo scp -r appid.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/report/appid/
+2023-04-18 20:19:29,223 - dealfile.py:get_flow:262 - DEBUG - 2  sudo rm -rf appid.txt
+2023-04-18 20:19:31,281 - dealfile.py:get_flow:262 - DEBUG - 4  sudo fp-npfctl flows-flush
+2023-04-18 20:19:33,333 - dealfile.py:get_flow:262 - DEBUG - 4  exit
+2023-04-18 20:19:33,434 - dealfile.py:replay_pcap:329 - DEBUG - 命中流707         TCP  100.100.67.67/63411   200.200.187.190/443   26-102-0-0      255-5-0-0       N:0     1   F:5 L:5 D:1 1414       8996       S:1  SF   3  
+
+2023-04-18 20:19:33,434 - dealfile.py:get_command_response:56 - DEBUG - 执行命令： cat /home/release/linhl/linhl-auto-py/update/appid/*rules.txt |grep 26-102-0-0|awk -F ' ' '{print $1}'
+2023-04-18 20:19:33,444 - dealfile.py:replay_pcap:339 - DEBUG - 命中流1 文件名： 26-102-0-0_销售易@iphone@20221212@yes.pcap 小包： /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.1.50_63411_42.187.172.173_443_1670567174.pcap   协议 tcp 源端口 63411 目的端口： 443 sid：26-102-0-0 name 销售易 bigpcap_sid: 26-102-0-0
+2023-04-18 20:19:33,447 - dealfile.py:shell_command:45 - DEBUG - 执行命令： echo 26-102-0-0_销售易@iphone@20221212@yes.pcap#192.168.1.50_63411_42.187.172.173_443_1670567174.pcap#11286#tcp#26-102-0-0#销售易#yes >> /home/release/linhl/linhl-auto-py/report/appid/log.csv
+2023-04-18 20:19:33,453 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:33,456 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:33,457 - dealfile.py:get_command_response:56 - DEBUG - 执行命令： cat /home/release/linhl/linhl-auto-py/update/appid/*rules.txt |grep  26-102-0-0|awk -F ' ' '{print $1}'
+2023-04-18 20:19:33,465 - dealfile.py:shell_command:45 - DEBUG - 执行命令： scp -r /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.1.50_63411_42.187.172.173_443_1670567174.pcap /home/release/linhl/linhl-auto-py/report/appid/only26-102-0-0_销售易@iphone@20221212@yes.pcap
+2023-04-18 20:19:33,476 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:33,478 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:33,479 - dealfile.py:replay_pcap:355 - DEBUG - terminal: iphone other: 20221212@yes.pcap name_final 销售易
+2023-04-18 20:19:33,480 - dealfile.py:replay_pcap:329 - DEBUG - 命中流707         TCP  100.100.67.67/63411   200.200.187.190/443   26-102-0-0      255-5-0-0       N:0     1   F:5 L:5 D:1 1414       8996       S:1  SF   3  
+
+2023-04-18 20:19:33,481 - dealfile.py:replay_pcap:329 - DEBUG - 命中流707         TCP  100.100.67.67/63411   200.200.187.190/443   26-102-0-0      255-5-0-0       N:0     1   F:5 L:5 D:1 1414       8996       S:1  SF   3  
+
+2023-04-18 20:19:33,482 - dealfile.py:shell_command:45 - DEBUG - 执行命令： rm -rf  /home/release/linhl/linhl-auto-py/report/appid/all//*
+2023-04-18 20:19:33,503 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:33,504 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:33,506 - dealfile.py:shell_command:45 - DEBUG - 执行命令： pkt2flow  -uo /home/release/linhl/linhl-auto-py/report/appid/all/ /home/release/linhl/linhl-auto-py/data/pcap_appid/21-102-0-0_销售易@iphone@20221212@yes.pcap
+2023-04-18 20:19:33,516 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:33,518 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:33,520 - dealfile.py:replay_pcap:275 - DEBUG - /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.1.50_63411_42.187.172.173_443_1670567174.pcap
+2023-04-18 20:19:33,520 - dealfile.py:replay_pcap:278 - DEBUG - ipv4
+2023-04-18 20:19:33,642 - dealfile.py:replay_pcap:285 - DEBUG - replay: bigpcap 4 bigpcap文件名： 21-102-0-0_销售易@iphone@20221212@yes.pcap smallpcap文件路径： /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.1.50_63411_42.187.172.173_443_1670567174.pcap smallpcap大小：11286B client:100.100.55.120 server:200.200.195.56
+2023-04-18 20:19:33,643 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcprewrite --enet-vlan=del --infile=/home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.1.50_63411_42.187.172.173_443_1670567174.pcap --outfile=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap
+2023-04-18 20:19:33,652 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:33,655 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:33,656 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcpprep --auto=client --cachefile=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach --pcap=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap
+2023-04-18 20:19:33,665 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:33,667 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:33,668 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcprewrite -m 1600 -C -e 100.100.55.120:200.200.195.56 --enet_smac=08:00:27:c1:da:1d,08:00:27:c1:da:2d                     --enet_dmac=28:d0:f5:04:55:e7,28:d0:f5:04:55:e8 -c /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach -i                     /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap -o /home/release/linhl/linhl-auto-py/temp/0418_2019/ok.pcap
+2023-04-18 20:19:33,675 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:33,676 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:33,677 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcpreplay -c /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach -i eth1 -I eth2 -l 1 -p 300 /home/release/linhl/linhl-auto-py/temp/0418_2019/ok.pcap
+2023-04-18 20:19:33,780 - dealfile.py:shell_command:49 - DEBUG - Actual: 28 packets (10814 bytes) sent in 0.090018 seconds
+Rated: 120131.5 Bps, 0.961 Mbps, 311.04 pps
+Statistics for network device: eth1
+	Successful packets:        14
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+Statistics for network device: eth2
+	Successful packets:        14
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+
+2023-04-18 20:19:33,785 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:33,785 - dealfile.py:get_flow:117 - DEBUG - 应用识别执行root账号命令
+2023-04-18 20:19:34,377 - dealfile.py:get_flow:182 - DEBUG - 执行命令为： ssh root@10.51.212.30
+2023-04-18 20:19:34,489 - dealfile.py:get_flow:204 - DEBUG - 输入防火墙密码： ruijie@123
+2023-04-18 20:19:34,541 - dealfile.py:get_flow:216 - DEBUG - 
+2023-04-18 20:19:34,542 - dealfile.py:get_flow:216 - DEBUG - 
+2023-04-18 20:19:34,624 - dealfile.py:get_flow:209 - DEBUG - 命令执行结束ssh root@10.51.212.30
+2023-04-18 20:19:34,715 - dealfile.py:get_flow:262 - DEBUG - 2  kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTY:5}` |grep -v bash | awk '{print $2}')
+2023-04-18 20:19:34,805 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 > appid.txt
+2023-04-18 20:19:34,898 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 >> appid.txt
+2023-04-18 20:19:34,987 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 >> appid.txt
+2023-04-18 20:19:35,144 - dealfile.py:get_flow:244 - DEBUG - 输入linux密码： ruijie12345
+2023-04-18 20:19:35,197 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:35,197 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:35,584 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:35,586 - dealfile.py:get_flow:256 - DEBUG - appid.txt                                       0%    0     0.0KB/s   --:-- ETA
+2023-04-18 20:19:35,586 - dealfile.py:get_flow:256 - DEBUG - appid.txt                                     100% 1386     1.1MB/s   00:00
+2023-04-18 20:19:35,586 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:35,593 - dealfile.py:get_flow:249 - DEBUG - 命令执行结束sudo scp -r appid.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/report/appid/
+2023-04-18 20:19:35,594 - dealfile.py:get_flow:262 - DEBUG - 1  sudo scp -r appid.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/report/appid/
+2023-04-18 20:19:35,666 - dealfile.py:get_flow:262 - DEBUG - 2  sudo rm -rf appid.txt
+2023-04-18 20:19:37,720 - dealfile.py:get_flow:262 - DEBUG - 4  sudo fp-npfctl flows-flush
+2023-04-18 20:19:39,773 - dealfile.py:get_flow:262 - DEBUG - 4  exit
+2023-04-18 20:19:39,874 - dealfile.py:replay_pcap:329 - DEBUG - 命中流706         TCP  100.100.55.120/63411  200.200.195.56/443    26-102-0-0      255-5-0-0       N:0     1   F:5 L:5 D:1 1414       8996       S:1  SF   3  
+
+2023-04-18 20:19:39,874 - dealfile.py:get_command_response:56 - DEBUG - 执行命令： cat /home/release/linhl/linhl-auto-py/update/appid/*rules.txt |grep 26-102-0-0|awk -F ' ' '{print $1}'
+2023-04-18 20:19:39,884 - dealfile.py:replay_pcap:339 - DEBUG - 命中流1 文件名： 21-102-0-0_销售易@iphone@20221212@yes.pcap 小包： /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.1.50_63411_42.187.172.173_443_1670567174.pcap   协议 tcp 源端口 63411 目的端口： 443 sid：26-102-0-0 name 销售易 bigpcap_sid: 21-102-0-0
+2023-04-18 20:19:39,886 - dealfile.py:shell_command:45 - DEBUG - 执行命令： echo 21-102-0-0_销售易@iphone@20221212@yes.pcap#192.168.1.50_63411_42.187.172.173_443_1670567174.pcap#11286#tcp#####no >> /home/release/linhl/linhl-auto-py/report/appid/log.csv
+2023-04-18 20:19:39,890 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:39,893 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:39,895 - dealfile.py:replay_pcap:329 - DEBUG - 命中流706         TCP  100.100.55.120/63411  200.200.195.56/443    26-102-0-0      255-5-0-0       N:0     1   F:5 L:5 D:1 1414       8996       S:1  SF   3  
+
+2023-04-18 20:19:39,895 - dealfile.py:replay_pcap:329 - DEBUG - 命中流706         TCP  100.100.55.120/63411  200.200.195.56/443    26-102-0-0      255-5-0-0       N:0     1   F:5 L:5 D:1 1414       8996       S:1  SF   3  
+
+2023-04-18 20:19:39,895 - dealfile.py:shell_command:45 - DEBUG - 执行命令： rm -rf  /home/release/linhl/linhl-auto-py/report/appid/all//*
+2023-04-18 20:19:39,910 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:39,910 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:39,910 - dealfile.py:shell_command:45 - DEBUG - 执行命令： pkt2flow  -uo /home/release/linhl/linhl-auto-py/report/appid/all/ /home/release/linhl/linhl-auto-py/data/pcap_appid/12-44-0-0_阿基米德-APP@android@20211208@yes.pcap
+2023-04-18 20:19:39,919 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:39,925 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:39,926 - dealfile.py:replay_pcap:275 - DEBUG - /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.232_37759_223.6.253.54_80_1638935136.pcap
+2023-04-18 20:19:39,926 - dealfile.py:replay_pcap:278 - DEBUG - ipv4
+2023-04-18 20:19:40,031 - dealfile.py:replay_pcap:285 - DEBUG - replay: bigpcap 5 bigpcap文件名： 12-44-0-0_阿基米德-APP@android@20211208@yes.pcap smallpcap文件路径： /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.232_37759_223.6.253.54_80_1638935136.pcap smallpcap大小：11279B client:100.100.39.55 server:200.200.54.240
+2023-04-18 20:19:40,033 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcprewrite --enet-vlan=del --infile=/home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.232_37759_223.6.253.54_80_1638935136.pcap --outfile=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap
+2023-04-18 20:19:40,041 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:40,043 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:40,044 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcpprep --auto=client --cachefile=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach --pcap=/home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap
+2023-04-18 20:19:40,051 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:40,052 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:40,053 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcprewrite -m 1600 -C -e 100.100.39.55:200.200.54.240 --enet_smac=08:00:27:c1:da:1d,08:00:27:c1:da:2d                     --enet_dmac=28:d0:f5:04:55:e7,28:d0:f5:04:55:e8 -c /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach -i                     /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.pcap -o /home/release/linhl/linhl-auto-py/temp/0418_2019/ok.pcap
+2023-04-18 20:19:40,059 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:40,061 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:40,062 - dealfile.py:shell_command:45 - DEBUG - 执行命令： tcpreplay -c /home/release/linhl/linhl-auto-py/temp/0418_2019/temp.cach -i eth1 -I eth2 -l 1 -p 300 /home/release/linhl/linhl-auto-py/temp/0418_2019/ok.pcap
+2023-04-18 20:19:40,187 - dealfile.py:shell_command:49 - DEBUG - Actual: 35 packets (10695 bytes) sent in 0.113349 seconds
+Rated: 94354.6 Bps, 0.754 Mbps, 308.78 pps
+Statistics for network device: eth1
+	Successful packets:        19
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+Statistics for network device: eth2
+	Successful packets:        16
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+
+2023-04-18 20:19:40,191 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:40,192 - dealfile.py:get_flow:117 - DEBUG - 应用识别执行root账号命令
+2023-04-18 20:19:40,788 - dealfile.py:get_flow:182 - DEBUG - 执行命令为： ssh root@10.51.212.30
+2023-04-18 20:19:40,906 - dealfile.py:get_flow:204 - DEBUG - 输入防火墙密码： ruijie@123
+2023-04-18 20:19:40,958 - dealfile.py:get_flow:216 - DEBUG - 
+2023-04-18 20:19:40,958 - dealfile.py:get_flow:216 - DEBUG - 
+2023-04-18 20:19:41,040 - dealfile.py:get_flow:209 - DEBUG - 命令执行结束ssh root@10.51.212.30
+2023-04-18 20:19:41,132 - dealfile.py:get_flow:262 - DEBUG - 2  kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTY:5}` |grep -v bash | awk '{print $2}')
+2023-04-18 20:19:41,221 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 > appid.txt
+2023-04-18 20:19:41,312 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 >> appid.txt
+2023-04-18 20:19:41,402 - dealfile.py:get_flow:262 - DEBUG - 2  sudo fp-npfctl cookie 3 >> appid.txt
+2023-04-18 20:19:41,560 - dealfile.py:get_flow:244 - DEBUG - 输入linux密码： ruijie12345
+2023-04-18 20:19:41,613 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:41,613 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:41,983 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:41,985 - dealfile.py:get_flow:256 - DEBUG - appid.txt                                       0%    0     0.0KB/s   --:-- ETA
+2023-04-18 20:19:41,986 - dealfile.py:get_flow:256 - DEBUG - appid.txt                                     100% 3234     1.2MB/s   00:00
+2023-04-18 20:19:41,986 - dealfile.py:get_flow:256 - DEBUG - 
+2023-04-18 20:19:41,993 - dealfile.py:get_flow:249 - DEBUG - 命令执行结束sudo scp -r appid.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/report/appid/
+2023-04-18 20:19:41,993 - dealfile.py:get_flow:262 - DEBUG - 1  sudo scp -r appid.txt root@10.51.213.206:/home/release/linhl/linhl-auto-py/report/appid/
+2023-04-18 20:19:42,073 - dealfile.py:get_flow:262 - DEBUG - 2  sudo rm -rf appid.txt
+2023-04-18 20:19:44,128 - dealfile.py:get_flow:262 - DEBUG - 4  sudo fp-npfctl flows-flush
+2023-04-18 20:19:46,180 - dealfile.py:get_flow:262 - DEBUG - 4  exit
+2023-04-18 20:19:46,282 - dealfile.py:replay_pcap:329 - DEBUG - 命中流246         TCP  100.100.39.55/37759   200.200.54.240/80     12-44-0-0       255-5-0-0       N:0     1   F:5 L:5 D:1 2093       8112       S:4  HF   2  
+
+2023-04-18 20:19:46,282 - dealfile.py:get_command_response:56 - DEBUG - 执行命令： cat /home/release/linhl/linhl-auto-py/update/appid/*rules.txt |grep 12-44-0-0|awk -F ' ' '{print $1}'
+2023-04-18 20:19:46,294 - dealfile.py:replay_pcap:339 - DEBUG - 命中流1 文件名： 12-44-0-0_阿基米德-APP@android@20211208@yes.pcap 小包： /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.232_37759_223.6.253.54_80_1638935136.pcap   协议 tcp 源端口 37759 目的端口： 80 sid：12-44-0-0 name 阿基米德-APP bigpcap_sid: 12-44-0-0
+2023-04-18 20:19:46,295 - dealfile.py:shell_command:45 - DEBUG - 执行命令： echo 12-44-0-0_阿基米德-APP@android@20211208@yes.pcap#192.168.137.232_37759_223.6.253.54_80_1638935136.pcap#11279#tcp#12-44-0-0#阿基米德-APP#yes >> /home/release/linhl/linhl-auto-py/report/appid/log.csv
+2023-04-18 20:19:46,302 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:46,303 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:46,308 - dealfile.py:get_command_response:56 - DEBUG - 执行命令： cat /home/release/linhl/linhl-auto-py/update/appid/*rules.txt |grep  12-44-0-0|awk -F ' ' '{print $1}'
+2023-04-18 20:19:46,316 - dealfile.py:shell_command:45 - DEBUG - 执行命令： scp -r /home/release/linhl/linhl-auto-py/report/appid/all/tcp_syn/192.168.137.232_37759_223.6.253.54_80_1638935136.pcap /home/release/linhl/linhl-auto-py/report/appid/only12-44-0-0_阿基米德-APP@android@20211208@yes.pcap
+2023-04-18 20:19:46,326 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-18 20:19:46,333 - dealfile.py:shell_command:50 - DEBUG - 
+2023-04-18 20:19:46,333 - dealfile.py:replay_pcap:355 - DEBUG - terminal: android other: 20211208@yes.pcap name_final 阿基米德-APP
+2023-04-18 20:19:46,334 - dealfile.py:replay_pcap:329 - DEBUG - 命中流246         TCP  100.100.39.55/37759   200.200.54.240/80     12-44-0-0       255-5-0-0       N:0     1   F:5 L:5 D:1 2093       8112       S:4  HF   2  
+
+2023-04-18 20:19:46,334 - dealfile.py:replay_pcap:329 - DEBUG - 命中流246         TCP  100.100.39.55/37759   200.200.54.240/80     12-44-0-0       255-5-0-0       N:0     1   F:5 L:5 D:1 2093       8112       S:4  HF   2  
+

@@ -1,0 +1,87 @@
+# Host 172.28.247.83 found: line 22
+/root/.ssh/known_hosts updated.
+Original contents retained as /root/.ssh/known_hosts.old
+The authenticity of host '172.28.247.83 (172.28.247.83)' can't be established.
+ECDSA key fingerprint is SHA256:stqW+/E8sFTolfHfvJTjPpiQDhA9V6gk2EL0vY8LdtQ.
+Are you sure you want to continue connecting (yes/no)? yes
+yes
+Warning: Permanently added '172.28.247.83' (ECDSA) to the list of known hosts.
+root@172.28.247.83's password: Ruijie@123
+
+root@firewall:~# kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTY:5}` |grep -v bash | awk '{print $2}')
+kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTYY:5}` |grep -v bash | awk '{print $2}')
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+root@firewall:~# sudo fpcmd fp app-id cfg enable cache false
+sudo fpcmd fp app-id cfg enable cache false
+root@firewall:~# sudo fpcmd fp app-id cfg enable expect false
+sudo fpcmd fp app-id cfg enable expect false
+root@firewall:~# sudo fpcmd fp app-id show application > /mnt/flash/app-rules.txt
+sudo fpcmd fp app-id show application > /mnt/flash/app-rules.txtt
+root@firewall:~# sudo scp -r /mnt/flash/app-rules.txt root@172.28.247.96:/home/release/linhl/linhl-auto-py/update/appid/
+sudo scp -r /mnt/flash/app-rules.txt root@172.28.247.96:/home/reelease/linhl/linhl-auto-py/update/appid/
+root@172.28.247.96's password: ruijie12345
+
+app-rules.txt                                   0%    0     0.0KB/s   --:-- ETAapp-rules.txt                                 100%  267KB  19.3MB/s   00:00    
+root@firewall:~# sudo fp-npfctl flows-flush
+sudo fp-npfctl flows-flush
+exit
+root@172.28.247.83's password: Ruijie@123
+
+root@firewall:~# kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTY:5}` |grep -v bash | awk '{print $2}')
+kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTYY:5}` |grep -v bash | awk '{print $2}')
+root@firewall:~# sudo fp-npfctl cookie 3 > appid.txt
+sudo fp-npfctl cookie 3 > appid.txt
+root@firewall:~# sudo fp-npfctl cookie 3 >> appid.txt
+sudo fp-npfctl cookie 3 >> appid.txt
+root@firewall:~# sudo fp-npfctl cookie 3 >> appid.txt
+sudo fp-npfctl cookie 3 >> appid.txt
+root@firewall:~# sudo scp -r appid.txt root@172.28.247.96:/home/release/linhl/linhl-auto-py/report/appid/
+sudo scp -r appid.txt root@172.28.247.96:/home/release/linhl/linnhl-auto-py/report/appid/
+root@172.28.247.96's password: ruijie12345
+
+appid.txt                                       0%    0     0.0KB/s   --:-- ETAappid.txt                                     100% 2772     1.0MB/s   00:00    
+root@firewall:~# sudo rm -rf appid.txt
+sudo rm -rf appid.txt
+root@firewall:~# sudo fp-npfctl flows-flush
+sudo fp-npfctl flows-flush
+exit
+root@172.28.247.83's password: Ruijie@123
+
+root@firewall:~# kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTY:5}` |grep -v bash | awk '{print $2}')
+kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTYY:5}` |grep -v bash | awk '{print $2}')
+root@firewall:~# sudo fp-npfctl cookie 3 > appid.txt
+sudo fp-npfctl cookie 3 > appid.txt
+root@firewall:~# sudo fp-npfctl cookie 3 >> appid.txt
+sudo fp-npfctl cookie 3 >> appid.txt
+root@firewall:~# sudo fp-npfctl cookie 3 >> appid.txt
+sudo fp-npfctl cookie 3 >> appid.txt
+root@firewall:~# sudo scp -r appid.txt root@172.28.247.96:/home/release/linhl/linhl-auto-py/report/appid/
+sudo scp -r appid.txt root@172.28.247.96:/home/release/linhl/linnhl-auto-py/report/appid/
+root@172.28.247.96's password: ruijie12345
+
+appid.txt                                       0%    0     0.0KB/s   --:-- ETAappid.txt                                     100%  924   363.0KB/s   00:00    
+root@firewall:~# sudo rm -rf appid.txt
+sudo rm -rf appid.txt
+root@firewall:~# sudo fp-npfctl flows-flush
+sudo fp-npfctl flows-flush
+exit
+root@172.28.247.83's password: Ruijie@123
+
+root@firewall:~# kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTY:5}` |grep -v bash | awk '{print $2}')
+kill -9 $(ps -ef | grep root | grep pts |grep -v `echo ${SSH_TTYY:5}` |grep -v bash | awk '{print $2}')
+root@firewall:~# sudo fp-npfctl cookie 3 > appid.txt
+sudo fp-npfctl cookie 3 > appid.txt
+root@firewall:~# sudo fp-npfctl cookie 3 >> appid.txt
+sudo fp-npfctl cookie 3 >> appid.txt
+root@firewall:~# sudo fp-npfctl cookie 3 >> appid.txt
+sudo fp-npfctl cookie 3 >> appid.txt
+root@firewall:~# sudo scp -r appid.txt root@172.28.247.96:/home/release/linhl/linhl-auto-py/report/appid/
+sudo scp -r appid.txt root@172.28.247.96:/home/release/linhl/linnhl-auto-py/report/appid/
+root@172.28.247.96's password: ruijie12345
+
+appid.txt                                       0%    0     0.0KB/s   --:-- ETAappid.txt                                     100%  924   346.6KB/s   00:00    
+root@firewall:~# sudo rm -rf appid.txt
+sudo rm -rf appid.txt
+root@firewall:~# sudo fp-npfctl flows-flush
+sudo fp-npfctl flows-flush
+exit

@@ -1,0 +1,2 @@
+9d6852bdb6332893bf7b3d2e372beb75  libsig_appid.so
+f6f2b75c2f605a53336705e59ba3133f  appid.sig

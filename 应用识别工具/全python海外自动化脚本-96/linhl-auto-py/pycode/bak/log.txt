@@ -1,0 +1,5 @@
+2023-04-13 14:08:15,032 - dealfile.py:ftp_get_file:594 - DEBUG - 下载文件为： ['(WEB)Ap.Archive Streaming.pcap']
+2023-04-13 14:08:15,035 - dealfile.py:ftp_get_file:597 - DEBUG - (WEB)Ap.Archive Streaming.pcap
+2023-04-13 14:08:17,610 - dealfile.py:shell_command:45 - DEBUG - 执行命令： rm -rf /home/release/linhl/linhl-auto-py/data/pcap_appid_temp//descript.ion
+2023-04-13 14:08:17,614 - dealfile.py:shell_command:49 - DEBUG - 
+2023-04-13 14:08:17,615 - dealfile.py:shell_command:50 - DEBUG - 

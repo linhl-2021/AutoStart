@@ -1,0 +1,28 @@
+import paramiko
+
+hostname = "remote_host"
+username = "remote_username"
+password = "remote_password"
+command = "your_command_here"
+
+# Create SSH client
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect(hostname, username=username, password=password)
+
+# Execute command on remote server
+stdin, stdout, stderr = ssh.exec_command(command)
+
+# Wait for the command to finish executing
+exit_status = stdout.channel.recv_exit_status()
+
+# Check if the command succeeded or failed
+if exit_status == 0:
+    print("Command succeeded:")
+    print(stdout.read().decode())
+else:
+    print("Command failed with exit status:", exit_status)
+    print(stderr.read().decode())
+
+# Close SSH client
+ssh.close()
