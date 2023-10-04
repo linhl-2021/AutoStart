@@ -147,8 +147,8 @@ def test(src_filename,result_filename_csv):
             line = line.strip()
             if line and not line.startswith("#"):
                 cookie1=line.replace("\n", "")
-                account,leftDays=get_account(cookie1)
                 message,business,balance=check_in(cookie1)
+                account,leftDays=get_account(cookie1)
                 # content=content+f"{account},{balance},{business},{message}\n"
                 # content_feishu=content_feishu+f"{num}、账号: {account},积分: {balance},签到: {business},信息: {message}\n"
                 result_list.append({"账号": account, "积分": balance, "签到": business, "信息": message,"天数": leftDays})
