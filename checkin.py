@@ -158,9 +158,6 @@ def test(src_filename,result_filename_csv):
     # 打印排序后的结果
     for entry in sorted_result:
         num=num+1
-        parts = entry.split(',')
-        formatted_line = ','.join([part.strip() for part in parts])
-        print(formatted_line)
         content_feishu=content_feishu+f"{num}、账号: {entry['账号']},积分: {entry['积分']},签到: {entry['签到']},信息: {entry['信息']},天数: {entry['天数']}\n"
         content=content+f"{entry['账号']},{entry['积分']},{entry['签到']},{entry['信息']},{entry['天数']}\n"
 
