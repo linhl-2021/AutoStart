@@ -152,16 +152,19 @@ def test(src_filename,result_filename_csv):
                 # content=content+f"{account},{balance},{business},{message}\n"
                 # content_feishu=content_feishu+f"{num}、账号: {account},积分: {balance},签到: {business},信息: {message}\n"
                 result_list.append({"账号": account, "积分": balance, "签到": business, "信息": message,"天数": leftDays})
-    
+
     # 按balance字段的值进行排序（假设balance是一个数字）
     sorted_result = sorted(result_list, key=lambda x: x["积分"], reverse=True)
     # 打印排序后的结果
     for entry in sorted_result:
         num=num+1
+        parts = entry.split(',')
+        formatted_line = ','.join([part.strip() for part in parts])
+        print(formatted_line)
         content_feishu=content_feishu+f"{num}、账号: {entry['账号']},积分: {entry['积分']},签到: {entry['签到']},信息: {entry['信息']},天数: {entry['天数']}\n"
         content=content+f"{entry['账号']},{entry['积分']},{entry['签到']},{entry['信息']},{entry['天数']}\n"
 
-    print(content_feishu) 
+    print(content_feishu)
     send_message(content_feishu)
     create_file(content,result_filename_csv)
 
