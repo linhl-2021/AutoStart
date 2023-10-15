@@ -131,46 +131,6 @@ def check_in(cookie):
         balance=int(balance)
         return message,business,balance
 
-def check_in2(cookie):
-    # 要查询的 URL
-    url = 'https://gdcr3799.com/api/Webapi_v1/Operate/doCheckin'
-    # url = 'https://glados.rocks/api/user/status'
-
-    payload = {
-        "token": "glados.one"
-        }
-
-    # 设置 User-Agent
-    headers = {
-        'Cookie': cookie,
-        # 'referer': 'https://glados.rocks/console/checkin',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',  # 替换成你自己的 User-Agent 字符串
-    }
-
-    # 发送 POST 请求，传递 payload 数据和请求头
-    response = requests.post(url,data=payload,headers=headers,verify=False)
-
-    # 检查响应状态码
-    if response.status_code == 200:
-        # 处理响应数据
-        # 请根据实际情况解析响应数据
-        print(response.text)
-        input_str=response.text
-        keyword1="is_checkin"
-        # keyword2="business"
-        # keyword3="balance"
-
-        # #积分
-        # balance=get_keywords(input_str,keyword3)
-        #签到时间
-        # business=get_keywords(input_str,keyword2)
-        message=get_keywords(input_str,keyword1)
-        # business=business.replace("checkin:","")
-        # business=business.replace("system:","")
-        # balance=balance.split('.')[0]
-        # balance=int(balance)
-        return message
-
 def create_file(content,result_filename_csv):
     with open(result_filename_csv, 'a', encoding='utf-8') as file2:
         file2.write(content)
@@ -202,17 +162,17 @@ def test(src_filename,result_filename_csv):
         content=content+f"{entry['账号']},{entry['积分']},{entry['签到']},{entry['信息']},{entry['天数']}\n"
 
     print(content_feishu)
-    send_message(content_feishu)
-    create_file(content,result_filename_csv)
+    # send_message(content_feishu)
+    # create_file(content,result_filename_csv)
 
     # send_message(content,'bcbd3669-fc22-43fd-95eb-4e2e787c3abf')
 
 codepath = os.path.dirname(os.path.abspath(__file__))
+#/home/runner/work/AutoStart/AutoStart
 print(codepath)
 now = datetime.now()
 formatted_time = now.strftime("%Y%m%d-%H%M%S")
 src_filename=f"{codepath}/cookie.sh"
+#/home/runner/work/AutoStart/AutoStart
 result_filename_csv=f"{codepath}/log/{formatted_time}.csv"
-# test(src_filename,result_filename_csv)
-cookie="7DA38D4B14F1329125C38FB72B7398A7663A9656C0B80E962609C0ECF41DA7039E9B85B63FB124B19867940202770B4197ED805C4AC8D2AEACC41194EAD60971E8E10F8010"
-check_in2(cookie)
+test(src_filename,result_filename_csv)
