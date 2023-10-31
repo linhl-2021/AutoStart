@@ -2,7 +2,7 @@ name: Daily Python Script
 
 on:
   workflow_dispatch:
-  # push:
+  push:
   schedule:
     - cron: '0 23 * * *'
   watch:
@@ -34,8 +34,8 @@ jobs:
         git config --local user.name "GitHub Action"
         git config --global url."https://x-access-token:${{ secrets.REPO_PAT }}@github.com/".insteadOf "https://github.com/"
 
-    - name: Commit and Push
-      run: |
-        git add -A
-        git commit -m "Add generated file" || echo "No changes to commit"
-        git push
+    # - name: Commit and Push
+    #   run: |
+    #     git add -A
+    #     git commit -m "Add generated file" || echo "No changes to commit"
+    #     git push
