@@ -118,7 +118,22 @@ def check_in(cookie):
 
         print("========================")
         print(cookie)
-        print(response.text)
+        # print(response.text)
+        data = json.loads(response.text)
+        if data['list']:
+            first_record = data['list'][0]
+            # 在这里使用 first_record 进行进一步处理或存储到变量中
+            print(first_record)
+        else:
+            # 如果列表为空，则继续其他操作
+            print("List is empty. Continuing...")
+        if data['message']:
+            message = data['message']
+            # 在这里使用 first_record 进行进一步处理或存储到变量中
+            print(message)
+        else:
+            # 如果列表为空，则继续其他操作
+            print("message is empty. Continuing...")
         input_str=response.text
         keyword1="message"
         keyword2="business"
