@@ -58,6 +58,7 @@ def get_keywords(input_str,keyword):
         return extracted_content
     else:
         print(f"找不到关键字 '{keyword}'")
+        return keyword
 
 def get_account(cookie):
 
@@ -114,7 +115,10 @@ def check_in(cookie):
     if response.status_code == 200:
         # 处理响应数据
         # 请根据实际情况解析响应数据
-        # print(response.text)
+
+        print("========================")
+        print(cookie)
+        print(response.text)
         input_str=response.text
         keyword1="message"
         keyword2="business"
@@ -128,7 +132,8 @@ def check_in(cookie):
         business=business.replace("checkin:","")
         business=business.replace("system:","")
         balance=balance.split('.')[0]
-        balance=int(balance)
+        if balance:
+            balance=int(balance)
         return message,business,balance
 
 def create_file(content,result_filename_csv):
