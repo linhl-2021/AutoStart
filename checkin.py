@@ -7,6 +7,15 @@ from urllib3.exceptions import InsecureRequestWarning
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
+def pad_string_to_num_chars(string,num=24):
+    if len(string) == num:
+        return string
+    elif len(string) < num:
+        # return string.ljust(num)
+        return string + " " * (num - len(string))
+    else:
+        return string[:num]
+    
 def send_message(msg,key='3ea705e6-4932-4978-8faf-e0a3510ae013'):
     data = {
         "msg_type": "text",
@@ -188,6 +197,9 @@ def test(src_filename,result_filename_csv):
     # 打印排序后的结果
     for entry in sorted_result:
         num=num+1
+        # 账号=pad_string_to_num_chars(str(entry['账号']),num=24)
+        # 积分=pad_string_to_num_chars(str(entry['积分'],),num=3)
+        # content_feishu=content_feishu+f"{num}、账号: {账号},积分: {积分},签到: {entry['签到']},信息: {entry['信息']},天数: {entry['天数']}\n"
         content_feishu=content_feishu+f"{num}、账号: {entry['账号']},积分: {entry['积分']},签到: {entry['签到']},信息: {entry['信息']},天数: {entry['天数']}\n"
         content=content+f"{entry['账号']},{entry['积分']},{entry['签到']},{entry['信息']},{entry['天数']}\n"
 
