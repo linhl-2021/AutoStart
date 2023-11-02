@@ -60,7 +60,7 @@ def get_keywords(input_str,keyword):
         return extracted_content
     elif match2:
         extracted_content = match2.group(1)
-        print("提取的内容:", extracted_content)
+        # print("提取的内容:", extracted_content)
         return extracted_content
     else:
         print(f"找不到关键字 '{keyword}'")
