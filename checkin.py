@@ -51,10 +51,16 @@ def get_keywords(input_str,keyword):
     # 使用正则表达式查找关键字后面的内容
     pattern = rf'"{keyword}":"(.*?)"'
     match = re.search(pattern, input_str)
+    pattern2 = rf'"{keyword}":(.*?)'
+    match2 = re.search(pattern2, input_str)
 
     if match:
         extracted_content = match.group(1)
         # print("提取的内容:", extracted_content)
+        return extracted_content
+    elif match2:
+        extracted_content = match2.group(1)
+        print("提取的内容:", extracted_content)
         return extracted_content
     else:
         print(f"找不到关键字 '{keyword}'")
@@ -79,11 +85,15 @@ def get_account(cookie):
     if response.status_code == 200:
         # 处理响应数据
         # 请根据实际情况解析响应数据
-        # print(response.text)
         input_str=response.text
         keyword1="email"
         keyword2="leftDays"
+        print("==========account==============")
+        print(cookie)
+        print(response.text)
         account=get_keywords(input_str,keyword1)
+        # "leftDays":"2.0000000000000000"
+        # "leftDays":0
         leftDays=get_keywords(input_str,keyword2)
         if leftDays:
             leftDays=leftDays.split('.')[0]
