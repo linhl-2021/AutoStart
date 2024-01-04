@@ -1,5 +1,6 @@
 import json
 import os
+import time
 import requests
 import re
 from datetime import datetime
@@ -72,7 +73,7 @@ def get_keywords(input_str,keyword):
         # print("提取的内容:", extracted_content)
         return extracted_content
     else:
-        print(f"找不到关键字 '{keyword}'")
+        print(f"找不到关键字1 '{keyword}'")
         return keyword
 
 def get_account(cookie):
@@ -160,13 +161,17 @@ def check_in(cookie):
 
         #积分
         balance=get_keywords(input_str,keyword3)
+        if balance == "balance":
+            time.sleep(1)
+            balance=get_keywords(input_str,keyword3)
+
         #签到时间
         business=get_keywords(input_str,keyword2)
         message=get_keywords(input_str,keyword1)
         business=business.replace("checkin:","")
         business=business.replace("system:","")
         balance=balance.split('.')[0]
-        if balance:
+        if balance != "balance":
             balance=int(balance)
         return message,business,balance
 
