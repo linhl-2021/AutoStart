@@ -210,7 +210,7 @@ def test(src_filename,result_filename_csv):
 
     print(content_feishu)
     send_message(content_feishu)
-    create_file(content,result_filename_csv)
+    # create_file(content,result_filename_csv)
 
     # send_message(content,'bcbd3669-fc22-43fd-95eb-4e2e787c3abf')
 
