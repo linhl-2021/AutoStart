@@ -25,9 +25,9 @@ def str_after_num(s,num):
     
     # first_8 = s[:num]  # 获取前8位
     last_8 = s[-num:]  # 获取后8位
-    middle = '*'  # 用一个*代替中间的字符
+    # middle = '*'  # 用一个*代替中间的字符
     
-    return first_8 + middle
+    return last_8
 
 def pad_string_to_num_chars(string,num=24):
     if len(string) == num:
