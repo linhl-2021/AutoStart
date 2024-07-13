@@ -9,12 +9,22 @@ from urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
-def mask_middle_with_asterisks(s):
-    if len(s) <= 18:
+def str_before_num(s,num):
+    if len(s) <= num:
         return s  # 如果字符串长度小于或等于16，返回原字符串
     
-    first_8 = s[:18]  # 获取前8位
+    first_8 = s[:num]  # 获取前8位
     # last_8 = s[-8:]  # 获取后8位
+    middle = '*'  # 用一个*代替中间的字符
+    
+    return first_8 + middle
+
+def str_after_num(s,num):
+    if len(s) <= num:
+        return s  # 如果字符串长度小于或等于16，返回原字符串
+    
+    # first_8 = s[:num]  # 获取前8位
+    last_8 = s[-num:]  # 获取后8位
     middle = '*'  # 用一个*代替中间的字符
     
     return first_8 + middle
@@ -220,8 +230,9 @@ def test(src_filename,result_filename_csv):
         # content_feishu=content_feishu+f"{num}、账号: {账号},积分: {积分},签到: {entry['签到']},信息: {entry['信息']},天数: {entry['天数']}\n"
         积分=str(entry['积分']).zfill(2)
         天数=str(entry['天数']).zfill(3)
-        信息=mask_middle_with_asterisks(entry['信息'])
-        content_feishu=content_feishu+f"{num_str}、积分: {积分},签到: {entry['签到']},信息: {信息},天数: {天数},账号: {entry['账号']}\n"
+        信息=str_before_num(entry['信息'],18)
+        签到=str_after_num(entry['签到'],10)
+        content_feishu=content_feishu+f"{num_str}、积分: {积分}，天数: {天数}，签到: {签到}，信息: {信息}，账号: {entry['账号']}\n"
         content=content+f"{entry['账号']},{entry['积分']},{entry['签到']},{entry['信息']},{entry['天数']}\n"
 
     print(content_feishu)
