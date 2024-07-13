@@ -8,6 +8,17 @@ from urllib3.exceptions import InsecureRequestWarning
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
+
+def mask_middle_with_asterisks(s):
+    if len(s) <= 16:
+        return s  # 如果字符串长度小于或等于16，返回原字符串
+    
+    first_8 = s[:8]  # 获取前8位
+    last_8 = s[-8:]  # 获取后8位
+    middle = '*'  # 用一个*代替中间的字符
+    
+    return first_8 + middle + last_8
+
 def pad_string_to_num_chars(string,num=24):
     if len(string) == num:
         return string
@@ -102,6 +113,7 @@ def get_account(cookie):
         print(cookie)
         print(response.text)
         account=get_keywords(input_str,keyword1)
+        # account = mask_middle_with_asterisks(account)
         # "leftDays":"2.0000000000000000"
         # "leftDays":0
         leftDays=get_keywords(input_str,keyword2)
@@ -138,7 +150,7 @@ def check_in(cookie):
 
         print("========================")
         print(cookie)
-        print(response.text)
+        # print(response.text)
         data = json.loads(response.text)
         if data['list']:
             first_record = data['list'][0]
@@ -202,10 +214,13 @@ def test(src_filename,result_filename_csv):
     # 打印排序后的结果
     for entry in sorted_result:
         num=num+1
+        num_str = str(num).zfill(2)
         # 账号=pad_string_to_num_chars(str(entry['账号']),num=24)
         # 积分=pad_string_to_num_chars(str(entry['积分'],),num=3)
         # content_feishu=content_feishu+f"{num}、账号: {账号},积分: {积分},签到: {entry['签到']},信息: {entry['信息']},天数: {entry['天数']}\n"
-        content_feishu=content_feishu+f"{num}、账号: {entry['账号']},积分: {entry['积分']},签到: {entry['签到']},信息: {entry['信息']},天数: {entry['天数']}\n"
+        积分=str(entry['积分']).zfill(2)
+        天数=str(entry['天数']).zfill(3)
+        content_feishu=content_feishu+f"{num_str}、积分: {积分},签到: {entry['签到']},信息: {entry['信息']},天数: {天数},账号: {entry['账号']}\n"
         content=content+f"{entry['账号']},{entry['积分']},{entry['签到']},{entry['信息']},{entry['天数']}\n"
 
     print(content_feishu)
@@ -219,7 +234,7 @@ codepath = os.path.dirname(os.path.abspath(__file__))
 print(codepath)
 now = datetime.now()
 formatted_time = now.strftime("%Y%m%d-%H%M%S")
-src_filename=f"{codepath}/cookie.sh"
+src_filename=f"{codepath}/cookie3.sh"
 #/home/runner/work/AutoStart/AutoStart
 result_filename_csv=f"{codepath}/log/{formatted_time}.csv"
 test(src_filename,result_filename_csv)
