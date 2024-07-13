@@ -138,7 +138,7 @@ def check_in(cookie):
 
         print("========================")
         print(cookie)
-        # print(response.text)
+        print(response.text)
         data = json.loads(response.text)
         if data['list']:
             first_record = data['list'][0]
