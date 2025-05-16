@@ -12,21 +12,21 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 def str_before_num(s,num):
     if len(s) <= num:
         return s  # 如果字符串长度小于或等于16，返回原字符串
-    
+
     first_8 = s[:num]  # 获取前8位
     # last_8 = s[-8:]  # 获取后8位
     middle = '*'  # 用一个*代替中间的字符
-    
+
     return first_8 + middle
 
 def str_after_num(s,num):
     if len(s) <= num:
         return s  # 如果字符串长度小于或等于16，返回原字符串
-    
+
     # first_8 = s[:num]  # 获取前8位
     last_8 = s[-num:]  # 获取后8位
     # middle = '*'  # 用一个*代替中间的字符
-    
+
     return last_8
 
 def pad_string_to_num_chars(string,num=24):
@@ -37,7 +37,7 @@ def pad_string_to_num_chars(string,num=24):
         return string + " " * (num - len(string))
     else:
         return string[:num]
-    
+
 def send_message(msg,key='3ea705e6-4932-4978-8faf-e0a3510ae013'):
     data = {
         "msg_type": "text",
@@ -97,7 +97,7 @@ def get_keywords(input_str,keyword):
         print(f"找不到关键字1 '{keyword}'")
         return keyword
 
-def get_account(cookie):
+def get_account(cookie,authorization):
 
     # 要查询的 URL
     url = 'https://glados.rocks/api/user/status'
@@ -105,6 +105,7 @@ def get_account(cookie):
     # 设置 User-Agent
     headers = {
         'Cookie': cookie,
+        'Authorization': authorization,
         # 'referer': 'https://glados.rocks/console/checkin',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',  # 替换成你自己的 User-Agent 字符串
     }
@@ -134,7 +135,7 @@ def get_account(cookie):
             leftDays=0
         return account,leftDays
 
-def check_in(cookie):
+def check_in(cookie,authorization):
     # 要查询的 URL
     url = 'https://glados.rocks/api/user/checkin'
     # url = 'https://glados.rocks/api/user/status'
@@ -146,6 +147,7 @@ def check_in(cookie):
     # 设置 User-Agent
     headers = {
         'Cookie': cookie,
+        'Authorization': authorization,
         # 'referer': 'https://glados.rocks/console/checkin',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',  # 替换成你自己的 User-Agent 字符串
     }
@@ -160,7 +162,7 @@ def check_in(cookie):
 
         print("========================")
         print(cookie)
-        # print(response.text)
+        print(response.text)
         data = json.loads(response.text)
         if data['list']:
             first_record = data['list'][0]
@@ -212,9 +214,10 @@ def test(src_filename,result_filename_csv):
             # 去除行两端的空白字符，然后检查是否为空白行
             line = line.strip()
             if line and not line.startswith("#"):
-                cookie1=line.replace("\n", "")
-                message,business,balance=check_in(cookie1)
-                account,leftDays=get_account(cookie1)
+                cookie1=line.replace("\n", "").split("###")[1]
+                authorization=line.replace("\n", "").split("###")[0]
+                message,business,balance=check_in(cookie1,authorization)
+                account,leftDays=get_account(cookie1,authorization)
                 # content=content+f"{account},{balance},{business},{message}\n"
                 # content_feishu=content_feishu+f"{num}、账号: {account},积分: {balance},签到: {business},信息: {message}\n"
                 result_list.append({"账号": account, "积分": balance, "签到": business, "信息": message,"天数": leftDays})
@@ -246,7 +249,7 @@ codepath = os.path.dirname(os.path.abspath(__file__))
 print(codepath)
 now = datetime.now()
 formatted_time = now.strftime("%Y%m%d-%H%M%S")
-src_filename=f"{codepath}/cookie3.sh"
+src_filename=f"{codepath}/cookie2.sh"
 #/home/runner/work/AutoStart/AutoStart
 result_filename_csv=f"{codepath}/log/{formatted_time}.csv"
 test(src_filename,result_filename_csv)
