@@ -1,3 +1,5 @@
+# pip install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
+# https://glados.cloud
 import json
 import os
 import time
@@ -100,13 +102,13 @@ def get_keywords(input_str,keyword):
 def get_account(cookie,authorization):
 
     # 要查询的 URL
-    url = 'https://glados.rocks/api/user/status'
+    url = 'https://glados.cloud/api/user/status'
 
     # 设置 User-Agent
     headers = {
         'Cookie': cookie,
         'Authorization': authorization,
-        # 'referer': 'https://glados.rocks/console/checkin',
+        # 'referer': 'https://glados.cloud/console/checkin',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',  # 替换成你自己的 User-Agent 字符串
     }
 
@@ -137,18 +139,18 @@ def get_account(cookie,authorization):
 
 def check_in(cookie,authorization):
     # 要查询的 URL
-    url = 'https://glados.rocks/api/user/checkin'
-    # url = 'https://glados.rocks/api/user/status'
+    url = 'https://glados.cloud/api/user/checkin'
+    # url = 'https://glados.cloud/api/user/status'
 
     payload = {
-        "token": "glados.one"
+        "token": "glados.cloud"
         }
 
     # 设置 User-Agent
     headers = {
         'Cookie': cookie,
         'Authorization': authorization,
-        # 'referer': 'https://glados.rocks/console/checkin',
+        # 'referer': 'https://glados.cloud/console/checkin',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',  # 替换成你自己的 User-Agent 字符串
     }
 
