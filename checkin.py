@@ -140,6 +140,7 @@ def get_account(cookie,authorization):
 def check_in(cookie,authorization):
     # 要查询的 URL
     url = 'https://glados.cloud/api/user/checkin'
+    # url = 'https://glados.cloud/api/user/checkin'
     # url = 'https://glados.cloud/api/user/status'
 
     payload = {
@@ -150,12 +151,11 @@ def check_in(cookie,authorization):
     headers = {
         'Cookie': cookie,
         'Authorization': authorization,
-        # 'referer': 'https://glados.cloud/console/checkin',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',  # 替换成你自己的 User-Agent 字符串
     }
-
     # 发送 POST 请求，传递 payload 数据和请求头
-    response = requests.post(url,data=payload,headers=headers,verify=False)
+    # response = requests.post(url,data=payload,headers=headers,verify=False)
+    response = requests.post(url, json=payload, headers=headers, verify=False)
 
     # 检查响应状态码
     if response.status_code == 200:
@@ -225,7 +225,8 @@ def test(src_filename,result_filename_csv):
                 result_list.append({"账号": account, "积分": balance, "签到": business, "信息": message,"天数": leftDays})
 
     # 按balance字段的值进行排序（假设balance是一个数字）
-    sorted_result = sorted(result_list, key=lambda x: x["积分"], reverse=True)
+    # sorted_result = sorted(result_list, key=lambda x: x["积分"], reverse=True)
+    sorted_result = result_list
     # 打印排序后的结果
     for entry in sorted_result:
         num=num+1
