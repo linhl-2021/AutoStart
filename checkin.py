@@ -111,33 +111,36 @@ def get_account(cookie,authorization):
         # 'referer': 'https://glados.cloud/console/checkin',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',  # 替换成你自己的 User-Agent 字符串
     }
+    try:
+        # 发送 POST 请求，传递 payload 数据和请求头
+        response = requests.get(url,headers=headers,verify=False)
 
-    # 发送 POST 请求，传递 payload 数据和请求头
-    response = requests.get(url,headers=headers,verify=False)
+        # 检查响应状态码
+        if response.status_code == 200:
+            # 处理响应数据
+            # 请根据实际情况解析响应数据
+            input_str=response.text
+            keyword1="email"
+            keyword2="leftDays"
+            # print("==========account==============")
+            # print(cookie)
+            # print(response.text)
+            account=get_keywords(input_str,keyword1)
+            # account = mask_middle_with_asterisks(account)
+            # "leftDays":"2.0000000000000000"
+            # "leftDays":0
+            leftDays=get_keywords(input_str,keyword2)
+            if leftDays:
+                leftDays=leftDays.split('.')[0]
+                leftDays=int(leftDays)
+            else:
+                leftDays=0
+            return account,leftDays
+    except requests.exceptions.RequestException as e:
+        print(f"接口请求异常: {e}")
 
-    # 检查响应状态码
-    if response.status_code == 200:
-        # 处理响应数据
-        # 请根据实际情况解析响应数据
-        input_str=response.text
-        keyword1="email"
-        keyword2="leftDays"
-        print("==========account==============")
-        print(cookie)
-        print(response.text)
-        account=get_keywords(input_str,keyword1)
-        # account = mask_middle_with_asterisks(account)
-        # "leftDays":"2.0000000000000000"
-        # "leftDays":0
-        leftDays=get_keywords(input_str,keyword2)
-        if leftDays:
-            leftDays=leftDays.split('.')[0]
-            leftDays=int(leftDays)
-        else:
-            leftDays=0
-        return account,leftDays
-
-def check_in(cookie,authorization):
+def check_in(cookie,authorization,account,num):
+    print(f"============{num}、{account}============")
     # 要查询的 URL
     url = 'https://glados.cloud/api/user/checkin'
     # url = 'https://glados.cloud/api/user/checkin'
@@ -148,59 +151,71 @@ def check_in(cookie,authorization):
         }
 
     # 设置 User-Agent
+    # headers = {
+    #     'Cookie': cookie,
+    #     'Authorization': authorization,
+    #     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36',  # 替换成你自己的 User-Agent 字符串
+    # }
     headers = {
         'Cookie': cookie,
-        'Authorization': authorization,
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',  # 替换成你自己的 User-Agent 字符串
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36',  # 替换成你自己的 User-Agent 字符串
     }
-    # 发送 POST 请求，传递 payload 数据和请求头
-    # response = requests.post(url,data=payload,headers=headers,verify=False)
-    response = requests.post(url, json=payload, headers=headers, verify=False)
+    try:
+        # 发送 POST 请求，传递 payload 数据和请求头
+        # response = requests.post(url,data=payload,headers=headers,verify=False)
+        response = requests.post(url, json=payload, headers=headers, verify=False)
 
-    # 检查响应状态码
-    if response.status_code == 200:
-        # 处理响应数据
-        # 请根据实际情况解析响应数据
+        # 检查响应状态码
+        if response.status_code == 200:
+            # 处理响应数据
+            # 请根据实际情况解析响应数据
 
-        print("========================")
-        print(cookie)
-        print(response.text)
-        data = json.loads(response.text)
-        if data['list']:
-            first_record = data['list'][0]
-            # 在这里使用 first_record 进行进一步处理或存储到变量中
-            print(first_record)
-        else:
-            # 如果列表为空，则继续其他操作
-            print("List is empty. Continuing...")
-        if data['message']:
-            message = data['message']
-            # 在这里使用 first_record 进行进一步处理或存储到变量中
-            print(message)
-        else:
-            # 如果列表为空，则继续其他操作
-            print("message is empty. Continuing...")
-        input_str=response.text
-        keyword1="message"
-        keyword2="business"
-        keyword3="balance"
+            print(cookie)
+            # print(response.text)
+            match = re.search(r'\{.*?\}', response.text)
+            if match:
+                print(match.group(0))
+            data = json.loads(response.text)
+            if data['list']:
+                first_record = data['list'][0]
+                # 在这里使用 first_record 进行进一步处理或存储到变量中
+                # print(first_record)
+            else:
+                # 如果列表为空，则继续其他操作
+                print("List is empty. Continuing...")
+            if data['message']:
+                message = data['message']
+                # 在这里使用 first_record 进行进一步处理或存储到变量中
+                # print(message)
+            else:
+                # 如果列表为空，则继续其他操作
+                print("message is empty. Continuing...")
+            input_str=response.text
+            keyword1="message"
+            keyword2="business"
+            keyword3="balance"
 
-        #积分
-        balance=get_keywords(input_str,keyword3)
-        if balance == "balance":
-            time.sleep(1)
+            #积分
             balance=get_keywords(input_str,keyword3)
+            if balance == "balance":
+                time.sleep(1)
+                balance=get_keywords(input_str,keyword3)
 
-        #签到时间
-        business=get_keywords(input_str,keyword2)
-        message=get_keywords(input_str,keyword1)
-        business=business.replace("checkin:","")
-        business=business.replace("system:","")
-        balance=balance.split('.')[0]
-        if balance != "balance":
-            balance=int(balance)
-        return message,business,balance
-
+            #签到时间
+            business=get_keywords(input_str,keyword2)
+            message=get_keywords(input_str,keyword1)
+            business=business.replace("checkin:","")
+            business=business.replace("system:","")
+            balance=balance.split('.')[0]
+            if balance != "balance":
+                balance=int(balance)
+            return message,business,balance
+    except requests.exceptions.RequestException as e:
+        print(f"接口请求异常: {e}")
+        message=""
+        business=""
+        balance=""
+        return message, business, balance
 def create_file(content,result_filename_csv):
     with open(result_filename_csv, 'a', encoding='utf-8') as file2:
         file2.write(content)
@@ -216,9 +231,11 @@ def test(src_filename,result_filename_csv):
             # 去除行两端的空白字符，然后检查是否为空白行
             line = line.strip()
             if line and not line.startswith("#"):
-                cookie1=line.replace("\n", "").split("###")[1]
-                authorization=line.replace("\n", "").split("###")[0]
-                message,business,balance=check_in(cookie1,authorization)
+                num=num+1
+                account1=line.replace("\n", "").split("###")[0]
+                cookie1=line.replace("\n", "").split("###")[2]
+                authorization=line.replace("\n", "").split("###")[1]
+                message,business,balance=check_in(cookie1,authorization,account=account1,num=num)
                 account,leftDays=get_account(cookie1,authorization)
                 # content=content+f"{account},{balance},{business},{message}\n"
                 # content_feishu=content_feishu+f"{num}、账号: {account},积分: {balance},签到: {business},信息: {message}\n"
