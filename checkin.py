@@ -225,17 +225,18 @@ def test(src_filename,result_filename_csv):
     content="账号,积分,签到,信息,天数\n"
     content_feishu="海外vpn\n"
     num=0
+    line_num=0
     result_list = []
     with open(src_filename, 'r',encoding='utf-8') as file:
         for line in file:
             # 去除行两端的空白字符，然后检查是否为空白行
             line = line.strip()
             if line and not line.startswith("#"):
-                num=num+1
+                line_num=line_num+1
                 account1=line.replace("\n", "").split("###")[0]
                 cookie1=line.replace("\n", "").split("###")[2]
                 authorization=line.replace("\n", "").split("###")[1]
-                message,business,balance=check_in(cookie1,authorization,account=account1,num=num)
+                message,business,balance=check_in(cookie1,authorization,account=account1,num=line_num)
                 account,leftDays=get_account(cookie1,authorization)
                 # content=content+f"{account},{balance},{business},{message}\n"
                 # content_feishu=content_feishu+f"{num}、账号: {account},积分: {balance},签到: {business},信息: {message}\n"
